@@ -1,16 +1,31 @@
-# React + Vite
+# ReactJS Dasar
+[https://docs.google.com/presentation/d/1HmgGmA1LpK78pF3ECQMSDrXEjk6wAgR5yaQxrbR6E18/edit](https://docs.google.com/presentation/d/1HmgGmA1LpK78pF3ECQMSDrXEjk6wAgR5yaQxrbR6E18/edit)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Pengenalan
+## Kenapa Butuh Framework?
+- Mungkin menjadi pertanyaan, kenapa kita butuh framework untuk membuat web Frontend?
+- Salah satu alasannya adalah agar ada standarisasi saat membuat project terutama ketika bekerja dalam tim
+- Tanpa adanya Framework, maka setiap orang akan membuat kode dengan gaya masing-masing
 
-Currently, two official plugins are available:
+## Sejarah ReactJS
+- FaxJS mulai dikembangkan di Facebook sekitar tahun 2010 untuk menangani masalah update halaman feed / timeline di Facebook tanpa harus refresh
+- Tahun 2011, FaxJS diintegrasikan dengan XHP (pengembangan PHP di Facebook), yang akhirnya dinamai ReactJS
+- Tahun 2013, Facebook merilis ReactJS ke umum sebagai OpenSource Tool pada saat JavaScript Conference
+- Saat ini, ReactJS menjadi salah satu Frontend Framework yang paling populer, dan orang banyak memanggilnya dengan React
+- [https://github.com/facebook/react](https://github.com/facebook/react)
+- [https://react.dev/](https://react.dev/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+## Component
+- Saat belajar React, kita harus terbiasa dengan istilah Component
+- Component adalah kumpulan kode yang bisa digunakan secara independen
+- Component bisa berisikan satu atau lebih HTML Element, kode JavaScript dan CSS
+- Tidak ada aturan harus seberapa kecil atau besar sebuah Component
+- Anggap saja seperti membuat Function, kita bisa membuat Function yang besar, atau kecil, karena tujuan Function adalah agar bisa digunakan secara berulang-ulang, begitu juga tujuan dari Component
+- Struktur Component mirip seperti DOM (Document Object Model), dimana kita bisa membuat Component di dalam Component lain
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## JSX
+- React menggunakan JSX ketika membuat Component
+- JSX (JavaScript XML atau JavaScript Syntax Extension), adalah kombinasi kode JavaScript dan XML (HTML), dimana kita bisa membuat Component dengan mudah menggunakan kode XML dan JavaScript dalam satu file
+- JSX diperkenalkan oleh Facebook di React, namun saat ini JSX sudah banyak diadopsi oleh banyak Framework JavaScript lainnya
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
