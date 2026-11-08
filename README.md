@@ -29,3 +29,22 @@
 - JSX (JavaScript XML atau JavaScript Syntax Extension), adalah kombinasi kode JavaScript dan XML (HTML), dimana kita bisa membuat Component dengan mudah menggunakan kode XML dan JavaScript dalam satu file
 - JSX diperkenalkan oleh Facebook di React, namun saat ini JSX sudah banyak diadopsi oleh banyak Framework JavaScript lainnya
 
+# Membuat Project
+## Membuat Project
+- Untuk membuat project React, kita akan menggunakan Vite sebagai build tool nya
+- Kita bisa membuat project React menggunakan beberapa perintah
+- Untuk membuat project React menggunakan JavaScript :
+```bash
+npm create vite@latest nama-aplikasi -- --template react
+```
+- Untuk membuat project React menggunakan TypeScript :
+```bash
+npm create vite@latest nama-aplikasi -- --template react-ts
+```
+- [https://vite.dev/guide/#scaffolding-your-first-vite-project](https://vite.dev/guide/#scaffolding-your-first-vite-project)
+
+## Update versi ReactJS
+- Pastikan menggunakan ReactJS yang terbaru
+- [https://www.npmjs.com/package/react](https://www.npmjs.com/package/react)
+- [https://www.npmjs.com/package/react-dom](https://www.npmjs.com/package/react-dom)
+
