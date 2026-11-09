@@ -199,6 +199,14 @@ contoh di file :
 - Pada kasus tertentu, mungkin ada kondisi dimana kita ingin mengembalikan Component, atau tidak ingin mengembalikan Component apapun
 - Kita bisa mengembalikan null untuk menandai bahwa tidak ada Component yang kita kembalikan
 
+## Ternary Operator
+- Kadang pada kasus yang lebih sederhana, kita bisa menggunakan Ternary Operator JavaScript di JSX
+
+## Logical AND
+- Di beberapa kasus yang lebih sederhana, kadang di JSX sering memanfaatkan Logical AND di JavaScript
+- Misal jika kondisi terpenuhi maka akan menampilkan, jika tidak maka tidak menampilkan
+
+
 
 
 contoh di file :

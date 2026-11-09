@@ -23,7 +23,9 @@ export default function Todo({text, isCompleted, isDeleted = false}){ // param t
         else { // kalo false
             return (
                 <li>
-                    {isCompleted ? <del>{text}</del> : text}  {/* ternary operator, jikea isCompleted true return props text dengan element <del> jika tidak return props text saja */}
+                   {/* {isCompleted ? <del>{text}</del> : text} */} {/* ternary operator, jikea isCompleted true return props text dengan element <del> jika tidak return props text saja */}
+
+                    {text} {isCompleted && '✔'} {/* jika true tampilkan emot ✔ */}
                 </li>
             )
         }
