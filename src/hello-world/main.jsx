@@ -1,14 +1,16 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import HelloWorld from "./HelloWorld";
+import Container from "../container/container";
 
 createRoot(document.getElementById("root")) // id root untuk di pakai di html nantinya
     .render(
         // <StrictMode></StrictMode> untuk proses development
         <StrictMode> 
-            {/*  render component HelloWorld yang sudah dibuat tadi */}
-            <HelloWorld/>
-            <HelloWorld/>
-            <HelloWorld/>
+            {/* nested component */}
+            <Container>
+                {/*  render component HelloWorld yang sudah dibuat tadi */}
+                <HelloWorld/>
+            </Container>
         </StrictMode>
     )

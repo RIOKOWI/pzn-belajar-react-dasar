@@ -158,3 +158,19 @@ contoh di file :
 - Untuk menambahkan Props pada Component, kita hanya perlu menambahkan parameter object pada function di Component
 - Parameter Props tersebut merupakan JavaScript Object, sehingga kita bisa mengakses detail attribute yang dikirim dari parent melalui Props
 
+
+contoh di file :
+- [src/hello-world/HelloWorld.jsx](src/hello-world/HelloWorld.jsx)
+
+
+# Nested Component
+## Nested Component
+- JSX mendukung pembuatan Nested Component
+- Hal ini memungkinkan kita bisa membuat Component yang di dalamnya bisa ditambahkan Component lain secara dinamis
+- Agar component bisa memiliki Component lain didalamnya, kita bisa menggunakan attribute children pada Props
+- Misal sekarang kita akan membuat Component bernama Container, dan didalamnya kita bisa berisi Component lainnya
+
+
+contoh di file :
+- [src\container\container.jsx](src\container\container.jsx)
+- [src/hello-world/main.jsx](src/hello-world/main.jsx)
