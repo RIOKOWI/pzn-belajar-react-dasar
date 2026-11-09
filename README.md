@@ -272,6 +272,19 @@ export function increment() {
 - Walaupun sebenarnya kita bisa saja membuat React Component yang tidak Pure, tapi sangat tidak disarankan, karena setiap memanggil Component dengan input sama bisa menghasilkan nilai yang tidak konsisten
 - Kita akan coba membuat contoh React Component yang tidak Pure
 
+## Membuat Pure Component
+- Lantas bagaimana acara Component Row dan Table menjadi Pure Component?
+- Kita harus menghapus efek samping dari Component, contohnya kita bisa pindahkan variable counter menjadi local variable di Table, dan gunakan Props sebagai counter nya
+
+
+## Dimana bisa melakukan efek samping?
+- React menyediakan tempat khusus jika kita ingin membuat Component yang bisa menghasilkan efek samping
+- Efek samping dari Component biasanya ditempatkan di Event Handler, yaitu aksi yang terjadi ketika kita berinteraksi dengan Component
+- Atau ketika misal Component tergantung dengan external system (misal API), maka React menyediakan function useEffect()
+- [https://react.dev/reference/react/useEffect](https://react.dev/reference/react/useEffect)
+- Semua ini akan kita bahas di materinya masing-masing
+
+
 
 
 contoh di file :

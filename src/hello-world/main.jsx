@@ -12,7 +12,7 @@ createRoot(document.getElementById("root")) // id root untuk di pakai di html na
             <Container> {/* nested component */}
                 <HelloWorld/> {/*  render component HelloWorld yang sudah dibuat tadi */}
                 <TodoList/> {/* conditional component */}
-                <Table/> {/* strict mode merender ui 2x sehinggan variable counter jalan 2x  */}
+                <Table/> {/* strict mode merender ui 2x sehingga variable counter jalan 2x kalo tidak pakai pure component */}
             </Container>
         </StrictMode>
     )
