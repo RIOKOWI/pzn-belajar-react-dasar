@@ -1,4 +1,7 @@
 export default function HelloWorld() { // bikin function penamaan nya sesuai dengan nama file & camel case
+    const props = { // untuk spread syntax
+        text: 'Hello World'
+    }
     return ( // mengembalikan element/membuat component
         // <> ini namanya fragment untuk pengganti div membungkus lebih dari 1 element
         // </>
@@ -7,21 +10,24 @@ export default function HelloWorld() { // bikin function penamaan nya sesuai den
             <p>gw lagi belajar react</p> */}
 
             {/* call multiple component */}
-            <HeaderHelloWorld/>
+            {/* implement props text */}
+            {/* <HeaderHelloWorld text="hello world"/>  */}
+
+            {/* implement props text using spread syntax */}
+            <HeaderHelloWorld {...props}/> 
             <ParagraphIntro/>
         </div>
     )
 }
 
 // create multiple component
-function HeaderHelloWorld() {
-    const text = 'Hello World'
+function HeaderHelloWorld({text = "kasih text dong"}) { // tambahin param props dengan text
     return (
         // kurung kurawal double buat object
         <h1 style={{ 
             color: "red",
             backgroundColor: "black" // wajib pake camelCase
-        }}>{text.toLocaleUpperCase()}</h1>
+        }}>{text.toLocaleUpperCase()}</h1> // implement props text ke element
         // cara akses code javascript di jsx
     )
 }

@@ -143,7 +143,18 @@ contoh di file :
 - Oleh karena itu, kadang sekilas terlihat seperti kurung kurawal double, padahal sebenarnya hanya satu - kurung kurawal, dan datanya adalah JavaScript Object
 
 
-
 contoh di file :
 - [src/hello-world/HelloWorld.jsx](src/hello-world/HelloWorld.jsx)
+
+
+# Props
+## Props
+- React Component menggunakan Props untuk berkomunikasi
+- Parent Component bisa mengirim informasi ke Child Component dengan menggunakan Props
+- Props itu mirip seperti attribute di HTML Element, tapi kita bisa mengirim nilai JavaScript seperti object, array, function atau yang lainnya
+
+
+## Menambah Props
+- Untuk menambahkan Props pada Component, kita hanya perlu menambahkan parameter object pada function di Component
+- Parameter Props tersebut merupakan JavaScript Object, sehingga kita bisa mengakses detail attribute yang dikirim dari parent melalui Props
 
