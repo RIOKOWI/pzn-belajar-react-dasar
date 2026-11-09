@@ -158,6 +158,18 @@ contoh di file :
 - Untuk menambahkan Props pada Component, kita hanya perlu menambahkan parameter object pada function di Component
 - Parameter Props tersebut merupakan JavaScript Object, sehingga kita bisa mengakses detail attribute yang dikirim dari parent melalui Props
 
+## Destructuring Props
+- Salah satu yang biasa dilakukan oleh programmer React adalah, melakukan destructuring parameter pada Props
+- Hal ini untuk mempermudah ketika membaca, sehingga kita tahu attribute apa yang tersedia pada Component tersebut
+- Karena Props adalah JavaScript Object, jadi kita juga bisa menambahkan fitur seperti Default Value pada Props
+
+## Mengirim Props
+- Untuk mengirim Props, kita bisa menggunakan atribut seperti HTML Element ketika menggunakan Component
+
+## Spread Syntax
+- Kadang-kadang, mengirim Props dari Parent Component ke Child Component sangat merepotkan
+- Jika kita hanya ingin melakukan forward semua Props ke Child Component, kita bisa menggunakan Spread Syntax di JavaScript
+
 
 contoh di file :
 - [src/hello-world/HelloWorld.jsx](src/hello-world/HelloWorld.jsx)
@@ -218,6 +230,14 @@ contoh di file :
 - Untuk menampilkan multiple Component, sama seperti Conditional, kita akan memanfaatkan JavaScript
 - Kita bisa menggunakan JavaScript Array untuk mengubah data Array menjadi Component, misal menggunakan method map() pada Array
 - Misal sekarang kita akan coba ubah data TodoList yang sebelumnya kita buat menjadi array 
+
+## Component Key
+- Jika kita perhatikan di Text Editor, mungkin kita akan melihat pesan peringatan : “Missing key prop for element in iterator”
+- Saat membuat Collection Component, tiap Component diperlukan id (unique, string atau number) menggunakan attribute key
+- Kenapa butuh Component Key? Hal ini agar React bisa mengenali Component ketika berubah, seperti posisinya diubah, dihapus atau ditambahkan pada Collection
+- Biasanya, Component Key akan diambil dari data, sehingga lebih konsisten
+
+
 
 *note : jsx tidak mempunyai fitur perulangan
 

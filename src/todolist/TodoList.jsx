@@ -14,27 +14,39 @@ export default function TodoList(){
 
     const data = [ // membuat array data
         {
+            id : 1,
             text : "LEARN Js",
             isCompleted : true,
         },
         {
+            id : 2,
             text : "LEARN Html",
             isCompleted : true,
         },
         {
+            id : 3,
             text : "LEARN Css",
             isCompleted : true,
         },
         {
+            id : 4,
             text : "LEARN React",
             isCompleted : false,
         },
     ]
 
-    const todos = data.map((todo) => <Todo {...todo}/>) // ambil 1 per satu data di array dan jadikan ke element <Todo>
-    return (
+    // const todos = data.map((todo) => <Todo {...todo}/>) // ambil 1 per satu data di array dan jadikan ke element <Todo>
+    // return (
+    //     <ul>
+    //         {todos} {/* lalu tampilkan data nya satu persatu */}
+    //     </ul>
+    // )
+    
+    return ( // best practice
         <ul>
-            {todos} {/* lalu tampilkan data nya satu persatu */}
+            {data.map((todo) => ( // ambil data 1 per satu dari array bernama data lalu
+                <Todo key={todo.id} {...todo}/> // jadikan element dengan key dari object id dan tampilkan 1 per satu
+            ))}
         </ul>
     )
 }
