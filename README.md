@@ -285,7 +285,26 @@ export function increment() {
 - Semua ini akan kita bahas di materinya masing-masing
 
 
+contoh di file :
+- [src\hello-world\main.jsx](src\hello-world\main.jsx)
+- [src\table\Table.jsx](src\table\Table.jsx)
+- [src\table\Row.jsx](src\table\Row.jsx)
+
+
+# Event Handler
+## Event Handler
+- Seperti yang sudah kita tahu bahwa di HTML Element, kita bisa menambahkan Event Handler
+- Sama juga dengan React Component, kita bisa menambahkan Event Handler pada Element di React Component
+- Ada banyak sekali jenis Event Handler yang bisa kita tambahkan, kita bisa lihat di halaman Reference React Component
+- [https://react.dev/reference/react-dom/components/common](https://react.dev/reference/react-dom/components/common)
+
+## Menambah Event Handler
+- Untuk menambah Event Handler, biasanya kita akan tambahkan Function sebagai Handler nya
+- Bisa dalam bentuk Anonymous Function, Arrow Function atau membuat Function terlebih dahulu di dalam scope Component nya
+- Nama Function untuk Handler biasanya diawali dengan nama “handle” dan diikuti dengan jenis Event Handler, misal handleClick(), handleMouseEnter(), dan lain-lain
+- Sekarang kita akan coba membuat Component untuk Alert Button
 
 
 contoh di file :
-- [src\todolist\TodoList.jsx](src\todolist\TodoList.jsx)
+- [src\hello-world\main.jsx](src\hello-world\main.jsx)
+- [src\button\AlertButton.jsx](src\button\AlertButton.jsx)

@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import HelloWorld from "./HelloWorld";
 import TodoList from "../todolist/TodoList";
 import Table from "../table/Table";
+import AlertButton from "../button/AlertButton";
 import Container from "../container/container";
 
 createRoot(document.getElementById("root")) // id root untuk di pakai di html nantinya
@@ -13,6 +14,7 @@ createRoot(document.getElementById("root")) // id root untuk di pakai di html na
                 <HelloWorld/> {/*  render component HelloWorld yang sudah dibuat tadi */}
                 <TodoList/> {/* conditional component */}
                 <Table/> {/* strict mode merender ui 2x sehingga variable counter jalan 2x kalo tidak pakai pure component */}
+                <AlertButton text="Teken o"/>
             </Container>
         </StrictMode>
     )
