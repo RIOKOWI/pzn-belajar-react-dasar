@@ -17,15 +17,23 @@ export default function HelloWorld() { // bikin function penamaan nya sesuai den
 function HeaderHelloWorld() {
     const text = 'Hello World'
     return (
+        // kurung kurawal double buat object
+        <h1 style={{ 
+            color: "red",
+            backgroundColor: "black" // wajib pake camelCase
+        }}>{text.toLocaleUpperCase()}</h1>
         // cara akses code javascript di jsx
-        <h1>{text.toLocaleUpperCase()}</h1>
     )
 }
 
 function ParagraphIntro() {
     const text = 'GW LAGI BELAJAR REACT'
+    const style = {
+        color: "yellow",
+        backgroundColor: "purple" // wajib pake camelCase
+    }
     return (
         // cara akses code javascript di jsx
-        <p>{text.toLowerCase()}</p>
+        <p style={style}>{text.toLowerCase()}</p>
     )
 }
