@@ -313,11 +313,17 @@ contoh di file :
 - Oleh karena itu, kita juga bisa membuat Event Handler di Props
 - Saat membuat attribute di Props yang berisikan Event Handler, biasanya nama attribute nya akan diawali dengan “on”, misal “onSmash”, “onHit” dan lain-lain
 
-
-
-
-
-
 contoh di file :
 - [src\hello-world\main.jsx](src\hello-world\main.jsx)
+- [src\button\AlertButton.jsx](src\button\AlertButton.jsx)
+- [src\button\MyButton.jsx](src\button\MyButton.jsx)
+
+# Event Object
+## Event Object
+- Saat kita membuat Event Handler Function, kita bisa menambahkan Event Object sebagai parameter di Function tersebut
+- React Event Object kompatibel dengan standard DOM Event Object
+- [https://react.dev/reference/react-dom/components/common#react-event-object](https://react.dev/reference/react-dom/components/common#react-event-object)
+- [https://developer.mozilla.org/en-US/docs/Web/API/Event](https://developer.mozilla.org/en-US/docs/Web/API/Event)
+
+contoh di file :
 - [src\button\AlertButton.jsx](src\button\AlertButton.jsx)

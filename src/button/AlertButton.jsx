@@ -1,5 +1,6 @@
 export default function AlertButton({text, message}) { // membuat component
-    function handleClick(){ // membuat handle function dengan awalan camel case dan handle untuk best practice
+    function handleClick(e){ // membuat handle function dengan awalan camel case dan handle untuk best practice
+        console.info(e);
         alert(message); // munculkan alert ketika di tekan, custom props di main
     }
 
