@@ -48,3 +48,18 @@ npm create vite@latest nama-aplikasi -- --template react-ts
 - [https://www.npmjs.com/package/react](https://www.npmjs.com/package/react)
 - [https://www.npmjs.com/package/react-dom](https://www.npmjs.com/package/react-dom)
 
+# Hello World
+## Hello World
+- Seperti biasa, hal yang biasa kita buat ketika belajar adalah membuat aplikasi Hello World
+- Sekarang kita akan buat halaman Hello World menggunakan React
+
+## Membuat Component
+- Biasanya, Component akan dibuat dalam satu file JSX dengan nama sesuai dengan nama komponen nya
+- Misal kita akan membuat Component bernama HelloWorld
+- Maka kita bisa membuat file HelloWorld.jsx
+- Selanjutnya, kita perlu membuat default function dengan nama Component nya, yaitu HelloWorld
+- Return dari function tersebut adalah element UI yang akan ditampilkan
+
+contoh di file :
+- [src/hello-world/HelloWorld.jsx](src/hello-world/HelloWorld.jsx)
+
