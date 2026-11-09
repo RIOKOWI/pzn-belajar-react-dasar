@@ -7,6 +7,7 @@ export default function TodoList(){
                 <Todo isCompleted={true} text="Learn HTML"/>
                 <Todo isCompleted={true} text="Learn CSS"/>
                 <Todo isCompleted={true} text="Learn JS"/>
+                <Todo isCompleted={true} text="Learn Rust" isDeleted={true}/> {/* kalo is deleted true, element tidak akan di tampilkan/null */}
                 <Todo isCompleted={false} text="Learn React"/>
             </ul>
     )

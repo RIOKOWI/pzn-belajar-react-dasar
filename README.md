@@ -195,6 +195,12 @@ contoh di file :
 - Kita bisa menambahkan kondisi menggunakan JavaScript, dan mengembalikan Component yang berbeda berdasarkan kondisi yang diinginkan
 - Contoh kita akan membuat halaman TodoList, dan jika Todo nya susah selesai, kita akan coret element teks nya
 
+## Null Component
+- Pada kasus tertentu, mungkin ada kondisi dimana kita ingin mengembalikan Component, atau tidak ingin mengembalikan Component apapun
+- Kita bisa mengembalikan null untuk menandai bahwa tidak ada Component yang kita kembalikan
+
+
+
 contoh di file :
 - [src\todolist\Todo.jsx](src\todolist\Todo.jsx)
 - [src\todolist\TodoList.jsx](src\todolist\TodoList.jsx)
