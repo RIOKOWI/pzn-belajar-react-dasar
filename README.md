@@ -238,8 +238,41 @@ contoh di file :
 - Biasanya, Component Key akan diambil dari data, sehingga lebih konsisten
 
 
-
 *note : jsx tidak mempunyai fitur perulangan
+
+contoh di file :
+- [src\todolist\TodoList.jsx](src\todolist\TodoList.jsx)
+
+
+# Pure Component
+## Pure Function
+- Dalam pemrograman, kita mengenal yang namanya Pure Function
+- [https://en.wikipedia.org/wiki/Pure_function](https://en.wikipedia.org/wiki/Pure_function)
+- Sebuah Function kita sebut sebagai Pure Function jika memenuhi dua kriteria berikut :
+- Function akan mengembalikan nilai yang sama untuk nilai parameter yang sama
+- Function tidak memiliki efek samping, tidak ada perubahan pada variable non local (variable yang berada diluar function)
+
+```js
+// contoh pure function
+export function double(num){
+    return num * 2
+}
+
+// contoh tidak pure function
+let counter = 0;
+export function increment() {
+    counter++
+    return counter;
+}
+```
+
+## Pure Component
+- React mengasumsikan bahwa setiap Component yang kita buat adalah Pure Function. 
+- Ini berarti bahwa React Component yang kita buat harus selalu mengembalikan JSX yang sama dengan input yang sama
+- Walaupun sebenarnya kita bisa saja membuat React Component yang tidak Pure, tapi sangat tidak disarankan, karena setiap memanggil Component dengan input sama bisa menghasilkan nilai yang tidak konsisten
+- Kita akan coba membuat contoh React Component yang tidak Pure
+
+
 
 contoh di file :
 - [src\todolist\TodoList.jsx](src\todolist\TodoList.jsx)

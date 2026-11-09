@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import HelloWorld from "./HelloWorld";
 import TodoList from "../todolist/TodoList";
+import Table from "../table/Table";
 import Container from "../container/container";
 
 createRoot(document.getElementById("root")) // id root untuk di pakai di html nantinya
@@ -11,6 +12,7 @@ createRoot(document.getElementById("root")) // id root untuk di pakai di html na
             <Container> {/* nested component */}
                 <HelloWorld/> {/*  render component HelloWorld yang sudah dibuat tadi */}
                 <TodoList/> {/* conditional component */}
+                <Table/> {/* strict mode merender ui 2x sehinggan variable counter jalan 2x  */}
             </Container>
         </StrictMode>
     )
