@@ -95,5 +95,39 @@ contoh di file :
 - Component sebenarnya hanyalah sebuah function yang mengembalikan React Element, oleh karena itu jika kita ingin membuat Component, kita hanya cukup membuat function yang mengembalikan React Element
 
 
+
 contoh di file :
 - [src/hello-world/HelloWorld.jsx](src/hello-world/HelloWorld.jsx)
+
+
+# JSX
+## Kenapa JSX
+- Web dibuat menggunakan HTML, CSS dan JavaScript. Biasanya kita akan menyimpan konten di HTML, desain di CSS dan logika aplikasi di JavaScript. Dan biasanya kita akan simpan di file-file yang terpisah
+- Tapi saat ini, Web sudah lebih interaktif, seringnya konten HTML ditampilkan berdasarkan logika aplikasi di JavaScript
+- Oleh karena itu, React melakukan logika aplikasi dan membuat konten di satu tempat yang sama, JSX
+
+## Mengubah HTML ke JSX
+- Saat mengubah kode HTML ke JSX, kita tidak bisa lakukan semudah Copy Paste kodenya
+- JSX memiliki aturan yang lebih ketat dibanding HTML, contohnya saat menggunakan tag element, wajib menggunakan tag tutup
+- Misal kita tidak bisa menggunakan 
+```html
+<img src=””>
+```
+- Kita harus gunakan tag tutup ketika menggunakan JSX
+```html
+<img src=”” />
+```
+- Beberapa attribute di tag element pun berbeda. Kita akan bahas secara bertahap
+
+## Aturan JSX
+- Component hanya boleh mengembalikan satu element, jika kita ingin mengembalikan beberapa element, kita harus bungkung dalam parent element
+- Wajib menutup semua tag element
+- Attribute menggunakan camelCase. Attribute di element JSX akan dikonversi ke variable JavaScript, oleh karena itu nama attribute harus mengikuti cara pembuatan nama variable di JavaScript, yaitu tidak bisa menggunakan - (strip). Karena keterbatasan ini, kebanyakan attribute di element JSX akan menggunakan camelCase, contoh className (bukan class-name)
+
+## JSX Converter
+- Jika misal kita sudah punya kode HTML, dan ingin mengkonversi ke JSX
+- Disarankan menggunakan Converter sehingga kita tidak perlu lakukan secara manual lagi
+- [https://transform.tools/html-to-jsx](https://transform.tools/html-to-jsx)
+
+
+
