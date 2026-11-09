@@ -206,10 +206,20 @@ contoh di file :
 - Di beberapa kasus yang lebih sederhana, kadang di JSX sering memanfaatkan Logical AND di JavaScript
 - Misal jika kondisi terpenuhi maka akan menampilkan, jika tidak maka tidak menampilkan
 
-
-
-
 contoh di file :
 - [src\todolist\Todo.jsx](src\todolist\Todo.jsx)
 - [src\todolist\TodoList.jsx](src\todolist\TodoList.jsx)
 - [src\hello-world\main.jsx](src\hello-world\main.jsx)
+
+
+# Collection Component
+## Collection Component
+- Kita pasti akan sering menampilkan Component yang sama berkali-kali sesuai koleksi data. JSX sendiri tidak memiliki fitur perulangan
+- Untuk menampilkan multiple Component, sama seperti Conditional, kita akan memanfaatkan JavaScript
+- Kita bisa menggunakan JavaScript Array untuk mengubah data Array menjadi Component, misal menggunakan method map() pada Array
+- Misal sekarang kita akan coba ubah data TodoList yang sebelumnya kita buat menjadi array 
+
+*note : jsx tidak mempunyai fitur perulangan
+
+contoh di file :
+- [src\todolist\TodoList.jsx](src\todolist\TodoList.jsx)
