@@ -60,6 +60,26 @@ npm create vite@latest nama-aplikasi -- --template react-ts
 - Selanjutnya, kita perlu membuat default function dengan nama Component nya, yaitu HelloWorld
 - Return dari function tersebut adalah element UI yang akan ditampilkan
 
+## Menampilkan Component
+- Untuk menampilkan Component, diperlukan instance dari React Root
+- Kita bisa membuat React Root menggunakan method createRoot(element)
+- [https://react.dev/reference/react-dom/client/createRoot](https://react.dev/reference/react-dom/client/createRoot)
+- Selanjutnya untuk menampilkan Component di React Root, kita bisa gunakan method render(component)
+- Untuk membantu mencari masalah saat development, React menyediakan component StrictMode, kita bisa menggunakan StrictMode untuk menampilkan komponen di Root
+- [https://react.dev/reference/react/StrictMode](https://react.dev/reference/react/StrictMode)
+
+## Command
+```bash
+# untuk build production
+npm run build
+
+# untuk development hot reload
+npm run dev
+```
+
 contoh di file :
 - [src/hello-world/HelloWorld.jsx](src/hello-world/HelloWorld.jsx)
+- [src/hello-world/main.jsx](src/hello-world/main.jsx)
+- [hello-world.html](hello-world.html)
+- [vite.config.js](vite.config.js)
 
