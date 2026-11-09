@@ -174,3 +174,17 @@ contoh di file :
 contoh di file :
 - [src\container\container.jsx](src\container\container.jsx)
 - [src/hello-world/main.jsx](src/hello-world/main.jsx)
+
+
+# Style
+## Style
+- Sampai saat ini, kita hanya baru membahas HTML dan JavaScript di JSX, bagaimana dengan CSS?
+- CSS sendiri bukan bagian dari JSX, jika kita ingin membuat style CSS, maka kita perlu buat dalam file - CSS, atau langsung di attribute style menggunakan kurung kurawal double yang pernah dicontohkan sebelumnya
+- Namun sekarang kita akan coba dalam file CSS
+- Menggunakan Style pada JSX, tidak menggunakan atribut class, melainkan className
+- [https://react.dev/reference/react-dom/components/common#applying-css-styles](https://react.dev/reference/react-dom/components/common#applying-css-styles)
+
+
+contoh di file :
+- [src\hello-world\HelloWorld.css](src\hello-world\HelloWorld.css)
+- [src\hello-world\HelloWorld.jsx](src\hello-world\HelloWorld.jsx)

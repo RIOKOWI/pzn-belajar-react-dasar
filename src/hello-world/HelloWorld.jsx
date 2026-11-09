@@ -1,3 +1,6 @@
+import './HelloWorld.css' // import file css
+
+
 export default function HelloWorld() { // bikin function penamaan nya sesuai dengan nama file & camel case
     const props = { // untuk spread syntax
         text: 'Hello World'
@@ -24,22 +27,24 @@ export default function HelloWorld() { // bikin function penamaan nya sesuai den
 function HeaderHelloWorld({text = "kasih text dong"}) { // tambahin param props dengan text
     return (
         // kurung kurawal double buat object
-        <h1 style={{ 
-            color: "red",
-            backgroundColor: "black" // wajib pake camelCase
-        }}>{text.toLocaleUpperCase()}</h1> // implement props text ke element
+        // <h1 style={{ 
+        //     color: "red",
+        //     backgroundColor: "black" // wajib pake camelCase
+        // }}>{text.toLocaleUpperCase()}</h1> // implement props text ke element
         // cara akses code javascript di jsx
+        <h1 className='title'>{text.toLocaleUpperCase()}</h1> // menggunakan className untuk style css 
     )
 }
 
 function ParagraphIntro() {
     const text = 'GW LAGI BELAJAR REACT'
-    const style = {
-        color: "yellow",
-        backgroundColor: "purple" // wajib pake camelCase
-    }
+    // const style = {
+    //     color: "yellow",
+    //     backgroundColor: "purple" // wajib pake camelCase
+    // }
     return (
         // cara akses code javascript di jsx
-        <p style={style}>{text.toLowerCase()}</p>
+        // <p style={style}>{text.toLowerCase()}</p>
+        <p className='content'>{text.toLowerCase()}</p> // menggunakan className untuk style css 
     )
 }
