@@ -94,8 +94,6 @@ contoh di file :
 - Walaupun itu adalah praktek yang baik, tapi bukan berarti itu wajib dilakukan
 - Component sebenarnya hanyalah sebuah function yang mengembalikan React Element, oleh karena itu jika kita ingin membuat Component, kita hanya cukup membuat function yang mengembalikan React Element
 
-
-
 contoh di file :
 - [src/hello-world/HelloWorld.jsx](src/hello-world/HelloWorld.jsx)
 
@@ -130,4 +128,11 @@ contoh di file :
 - [https://transform.tools/html-to-jsx](https://transform.tools/html-to-jsx)
 
 
+# JavaScript di JSX
+## JavaScript di JSX
+- Kadang-kadang, kita kasus dimana kita ingin mengakses kode JavaScript di JSX
+- Pada kasus ini, kita bisa menggunakan kurung kurawal untuk mengakses kode JavaScript di JSX
+
+contoh di file :
+- [src/hello-world/HelloWorld.jsx](src/hello-world/HelloWorld.jsx)
 

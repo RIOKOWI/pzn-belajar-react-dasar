@@ -15,13 +15,17 @@ export default function HelloWorld() { // bikin function penamaan nya sesuai den
 
 // create multiple component
 function HeaderHelloWorld() {
+    const text = 'Hello World'
     return (
-        <h1>Hello World</h1>
+        // cara akses code javascript di jsx
+        <h1>{text.toLocaleUpperCase()}</h1>
     )
 }
 
 function ParagraphIntro() {
+    const text = 'GW LAGI BELAJAR REACT'
     return (
-        <p>gw lagi belajar react</p>
+        // cara akses code javascript di jsx
+        <p>{text.toLowerCase()}</p>
     )
 }
