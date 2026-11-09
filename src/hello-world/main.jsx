@@ -4,7 +4,9 @@ import HelloWorld from "./HelloWorld";
 import TodoList from "../todolist/TodoList";
 import Table from "../table/Table";
 import AlertButton from "../button/AlertButton";
+
 import Container from "../container/container";
+import MyButton from "../button/MyButton";
 
 createRoot(document.getElementById("root")) // id root untuk di pakai di html nantinya
     .render(
@@ -15,6 +17,7 @@ createRoot(document.getElementById("root")) // id root untuk di pakai di html na
                 <TodoList/> {/* conditional component */}
                 <Table/> {/* strict mode merender ui 2x sehingga variable counter jalan 2x kalo tidak pakai pure component */}
                 <AlertButton text="Teken o" message="ancooooook"/>
+                <MyButton text="Hit me" onSmash={() => alert("Oucchhhhhhh")}/> {/* onsmash props membuat event handler */}
             </Container>
         </StrictMode>
     )
