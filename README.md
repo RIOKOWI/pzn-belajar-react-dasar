@@ -304,6 +304,19 @@ contoh di file :
 - Nama Function untuk Handler biasanya diawali dengan nama “handle” dan diikuti dengan jenis Event Handler, misal handleClick(), handleMouseEnter(), dan lain-lain
 - Sekarang kita akan coba membuat Component untuk Alert Button
 
+## Membaca Props di Event Handler
+- Salah satu keuntungan membuat Function Event Handler di dalam Component adalah, kita bisa membaca Props yang digunakan oleh Component tersebut
+
+## Event Handler sebagai Props
+- Seperti yang di materi Props dibahas, Props sebenarnya adalah JavaScript Object
+- Kita tahu bahwa JavaScript Object bisa memiliki attribute dengan tipe Function
+- Oleh karena itu, kita juga bisa membuat Event Handler di Props
+- Saat membuat attribute di Props yang berisikan Event Handler, biasanya nama attribute nya akan diawali dengan “on”, misal “onSmash”, “onHit” dan lain-lain
+
+
+
+
+
 
 contoh di file :
 - [src\hello-world\main.jsx](src\hello-world\main.jsx)
