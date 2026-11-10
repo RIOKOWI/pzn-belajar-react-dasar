@@ -327,3 +327,16 @@ contoh di file :
 
 contoh di file :
 - [src\button\AlertButton.jsx](src\button\AlertButton.jsx)
+
+
+# Event Propagation
+## Event Propagation
+- Event di React Component akan selalu disebarkan ke Component yang ada diatasnya (Event Propagation)
+- Misal kita memiliki Div dengan Event onClick, lalu didalamnya kita memiliki Button dengan Event onClick
+- Ketika Button di klik, maka onClick di Button akan dipicu dan selanjutnya onClick di Div juga akan dipicu
+- Kadang mungkin kita tidak ingin hal itu terjadi, maka kita bisa hentikan proses Event Propagation tersebut menggunakan method stopPropagation()
+- [https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation](https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation)
+
+
+contoh di file :
+- [src\button\AlertButton.jsx](src\button\AlertButton.jsx)
