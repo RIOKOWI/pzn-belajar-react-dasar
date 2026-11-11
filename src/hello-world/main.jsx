@@ -27,6 +27,9 @@ createRoot(document.getElementById("root")) // id root untuk di pakai di html na
                 }}/>
                 <SearchForm/>
                 <SayHelloForm/>
+
+                <Counter/>
+                {/* atas dengan bawah berbeda state walau namanya sama atau isolate state */}
                 <Counter/>
             </Container>
         </StrictMode>

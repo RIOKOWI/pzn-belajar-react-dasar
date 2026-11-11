@@ -391,6 +391,10 @@ contoh di file :
 - Function useState akan mengembalikan array dengan dua nilai, pertama adalah State-nya, dan kedua ada function untuk mengubah value di State tersebut
 - Component yang menggunakan State tersebut, secara otomatis akan di render ulang
 
+## State Terisolasi dan Private
+- State merupakan data yang terisolasi dan private secara local terhadap Component yang menggunakan
+- Artinya, jika kita me-render Component yang sama berkali-kali, maka State dari tiap Component tersebut akan terpisah satu sama lain
+
 
 contoh di file :
 - [src\form\Counter.jsx](src\form\Counter.jsx)
