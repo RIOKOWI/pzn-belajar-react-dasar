@@ -1,4 +1,5 @@
-import { useState } from "react"
+// import { useState } from "react"
+import { useImmer } from "use-immer"
 
 const initialData = { // set initial/default data
     name : "",
@@ -6,23 +7,38 @@ const initialData = { // set initial/default data
 }
 
 export default function ContactForm(){
-    let [contact, setContact] = useState(initialData) // membuat usesate untuk initial data
+    // WITHOUT IMMER
+    // let [contact, setContact] = useState(initialData) // membuat usesate untuk initial data
     
-    function handleNameChange(e){ // func untuk handle perubahan nama dengan param event e
-        setContact({ // trigger render ulang
-            // lalu timpa dengan object baru
-            ...contact, // update data baru
-            name: e.target.value // dengan value baru dari inputan
-        })
+    // function handleNameChange(e){ // func untuk handle perubahan nama dengan param event e
+    //     setContact({ // trigger render ulang
+    //         // lalu timpa dengan object baru
+    //         ...contact, // update data baru
+    //         name: e.target.value // dengan value baru dari inputan
+    //     })
+    // } 
+
+    // function handleMessageChange(e){
+    //     setContact({ // trigger render ulang
+    //         // lalu timpa dengan object baru
+    //         ...contact,
+    //         message: e.target.value
+    //     })
+    // } 
+
+    // WITH IMMER
+    let [contact, setContact] = useImmer(initialData) // membuat usesate untuk initial data
+    
+    function handleNameChange(e){ 
+        setContact(contact => 
+            {contact.name = e.target.value})
+    } 
+    
+    function handleMessageChange(e){ 
+        setContact(contact => 
+            {contact.message = e.target.value})
     } 
 
-    function handleMessageChange(e){
-        setContact({ // trigger render ulang
-            // lalu timpa dengan object baru
-            ...contact,
-            message: e.target.value
-        })
-    } 
     return (
         <div>
             <h1>Contact Form</h1>
