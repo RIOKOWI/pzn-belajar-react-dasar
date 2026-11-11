@@ -461,3 +461,19 @@ contoh di file :
 
 contoh di file :
 - [src\form\Counter.jsx](src\form\Counter.jsx)
+
+
+# Object di State
+## Object di State
+- State bisa menyimpan jenis data JavaScript apapun, termasuk Object
+- Tapi kita tidak disarankan untuk mengubah object yang terdapat di State
+- Jika kita ingin mengubah object di State, kita disarankan membuat object baru lalu mengubah data di State tersebut dengan object baru
+
+## Immutable Data
+- Saat kita membuat data di State, kita harus memperlakukan data di State sebagai Immutable data (tidak bisa berubah)
+- Artinya data di State hanya digunakan untuk dibaca (read only)
+- Jika kita ingin mengubah data di State, maka kita harus ubah menggunakan data baru, yang artinya data lama tidak dimodifikasi
+- Ini adalah praktek yang biasa dilakukan di React. Walaupun pada kenyataannya object di JavaScript tidak immutable
+- Hal ini direkomendasikan agar kita tidak salah mengubah data langsung, padahal kita tahu bahwa mengubah data tidak akan memicu proses render ulang
+- Untungnya di JavaScript kita bisa menggunakan Spread Syntax untuk membantu meng-copy attribute di Object
+
