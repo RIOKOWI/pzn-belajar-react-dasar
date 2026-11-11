@@ -441,6 +441,23 @@ contoh di file :
 - Berikut adalah contoh kesalahan yang biasa dilakukan ketika mengubah State
 - Kita berpikir jika mengubah State, saat itu juga data akan berubah, padahal mengubah State sebenarnya hanyalah mentrigger render ulang dengan nilai state yang baru
 
+## Kenapa Counter Tidak Berubah 3x?
+- Hal ini dikarenakan, setCounter() tidak akan mengubah data counter yang ada di Snapshot saat ini
+- setCounter() hanya akan melakukan render ulang dengan data counter yang baru
+- Saat kita memanggil setCounter() sebanyak 3x, bukan berarti React akan melakukan render ulang sebanyak 3x, React akan menunggu sampai Event Handler selesai, jika ada perubahan State, maka akan dilakukan render ulang
+- Artinya render ulang akan dilakukan sekali saja, walaupun kita mengubah State berkali-kali
+
+contoh di file :
+- [src\form\Counter.jsx](src\form\Counter.jsx)
+
+
+# State Updates
+## State Updates
+- Seperti yang sebelumnya dibahas, melakukan update State berkali-kali, tidak akan mengubah data State di Snapshot saat itu, melainkan hanya memicu untuk render ulang dengan data State baru
+- Tapi, kadang-kadang, kita memang mungkin ada keperluan untuk mengubah data di State yang sama berkali-kali
+- Dan jika kita memang ingin mengubah data di State dengan data yang harapannya sudah diubah sebelumnya (walaupun belum di render ulang)
+- Kita bisa menggunakan lambda sebagai parameter ketika memanggil function untuk update data State
+
 
 contoh di file :
 - [src\form\Counter.jsx](src\form\Counter.jsx)

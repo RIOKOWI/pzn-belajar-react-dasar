@@ -33,14 +33,35 @@ export default function Counter(){
 
 
     // PROOF SNAPSHOT
+    // let [counter, setCounter] = useState(0);
+
+    // function handleClick(){
+    //     setCounter(counter + 1) // 0 + 1
+    //     setCounter(counter + 1) // 0 + 1
+    //     setCounter(counter + 1) // 0 + 1
+    //     // data snapshot di variable counter(0) tidak akan berubah karna konsep snapshot di state itu merender ulang atau membuat snapshot baru
+    //     // jadi saat di klik tidak akan +3 karna event ngecek jika ada 1 state sama yang berubah tidak akan di rubah lagi dan akan di render ulang 1x bukan 3x
+    //     console.log(counter);
+    // }
+    // return (
+    //     <div>
+    //         <button onClick={handleClick}>
+    //             Increment +3
+    //         </button>
+    //         <h1>Counter : {counter}</h1>
+    //     </div>
+    // )
+
+
     let [counter, setCounter] = useState(0);
 
+    console.info(`Return Counter ${counter}`)
     function handleClick(){
-        setCounter(counter + 1) // 0 + 1
-        setCounter(counter + 1) // 0 + 1
-        setCounter(counter + 1) // 0 + 1
-        // data snapshot di variable counter(0) tidak akan berubah karna konsep snapshot di state itu merender ulang atau membuat snapshot baru
-        // jadi saat di klik tidak akan +3 karna event ngecek jika ada 1 state sama yang berubah tidak akan di rubah lagi dan akan di render ulang 1x bukan 3x
+        setCounter(c => c + 1) // state update
+        setCounter(c => c + 1) // state update
+        setCounter(c => c + 1) // state update
+        
+        
         console.log(counter);
     }
     return (
