@@ -477,6 +477,35 @@ contoh di file :
 - Hal ini direkomendasikan agar kita tidak salah mengubah data langsung, padahal kita tahu bahwa mengubah data tidak akan memicu proses render ulang
 - Untungnya di JavaScript kita bisa menggunakan Spread Syntax untuk membantu meng-copy attribute di Object
 
+## Nested Object
+- Kadang ada kasus kita menggunakan Nested Object
+- Sama seperti sebelumnya, kita disarankan untuk selalu membuat object baru ketika mengubah State
+- Kadang memang menyulitkan ketika Nested Object nya terlalu besar, oleh karena itu disarankan tidak terlalu dalam membuat Nested Object nya
+
+## Immer Library
+- Salah satu library yang sering digunakan ketika develop aplikasi menggunakan React adalah Immer
+- Immer adalah library yang digunakan untuk membuat immutable object dari object saat ini
+- Menggunakan Immer akan lebih mudah dibandingkan menggunakan Spread Syntax, terutama untuk Object yang kompleks dan Nested
+- [https://github.com/immerjs/immer](https://github.com/immerjs/immer)
+
+## Cara Kerja Library Immer 
+- [immer works](https://docs.google.com/presentation/d/1HmgGmA1LpK78pF3ECQMSDrXEjk6wAgR5yaQxrbR6E18/edit?slide=id.g31cef895ca3_0_1062#slide=id.g31cef895ca3_0_1062)
+- [https://immerjs.github.io/immer/](https://immerjs.github.io/immer/)
+
+
+## Use Immer Library
+- Library Immer juga bisa diintegrasikan dengan React State dengan mudah
+- Kita bisa menggunakan library Use-Immer
+[https://github.com/immerjs/use-immer](https://github.com/immerjs/use-immer)
+- Kita cukup mengganti useState() menjadi useImmer()
+- Dan untuk mengupdate Object di State, kita bisa menggunakan Function sebagai parameter di Update Method nya
+
+## Menambah Library Immer
+```bash
+npm install immer use-immer
+```
+
+
 
 contoh di file :
 - [vite.config.js](vite.config.js)
