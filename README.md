@@ -346,3 +346,16 @@ contoh di file :
 
 contoh di file :
 - [src\form\SearchForm.jsx](src\form\SearchForm.jsx)
+- [src\hello-world\main.jsx ](src\hello-world\main.jsx)
+
+
+# Side Effect
+## Side Effect
+- Apakah Component boleh memiliki Side Effect (efek samping)? 
+- Tentu saja boleh, namun biasanya Side Effect terjadi dikarenakan adanya interaksi dari pengguna melalui Event Handler
+- Misal, kita akan membuat Form Say Hello, dimana ketika Button di klik, kita ingin menampilkan Hello + nama pada Text 
+
+
+contoh di file :
+- [src\form\SayHelloForm.jsx](src\form\SayHelloForm.jsx)
+- [src\hello-world\main.jsx](src\hello-world\main.jsx)

@@ -8,6 +8,7 @@ import Toolbar from "../button/Toolbar";
 import Container from "../container/container";
 import MyButton from "../button/MyButton";
 import SearchForm from "../form/SearchForm";
+import SayHelloForm from "../form/SayHelloForm";
 
 createRoot(document.getElementById("root")) // id root untuk di pakai di html nantinya
     .render(
@@ -24,6 +25,7 @@ createRoot(document.getElementById("root")) // id root untuk di pakai di html na
                     alert("You hit me");
                 }}/>
                 <SearchForm/>
+                <SayHelloForm/>
             </Container>
         </StrictMode>
     )
