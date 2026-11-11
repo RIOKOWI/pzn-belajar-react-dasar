@@ -385,6 +385,14 @@ contoh di file :
 - Ketika React melakukan render Component untuk yang kedua kali dan seterusnya, maka semua kode Component akan dieksekusi ulang, oleh karena itu local variable akan kembali ke nilai awal
 - Perubahan di local variable juga, tidak akan memicu render ulang Component
 
+## useState
+- Untuk membuat State, kita bisa menggunakan function useState(initial)
+- [https://react.dev/reference/react/useState](https://react.dev/reference/react/useState )
+- Function useState akan mengembalikan array dengan dua nilai, pertama adalah State-nya, dan kedua ada function untuk mengubah value di State tersebut
+- Component yang menggunakan State tersebut, secara otomatis akan di render ulang
+
+
 contoh di file :
-- [src\form\SayHelloForm.jsx](src\form\SayHelloForm.jsx)
+- [src\form\Counter.jsx](src\form\Counter.jsx)
+- [src\hello-world\main.jsx](src\hello-world\main.jsx)
 
