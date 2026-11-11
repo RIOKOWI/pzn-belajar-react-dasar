@@ -355,7 +355,19 @@ contoh di file :
 - Tentu saja boleh, namun biasanya Side Effect terjadi dikarenakan adanya interaksi dari pengguna melalui Event Handler
 - Misal, kita akan membuat Form Say Hello, dimana ketika Button di klik, kita ingin menampilkan Hello + nama pada Text 
 
+## DOM Manipulation
+- Kode sebelumnya, kita menggunakan DOM Manipulation untuk mengubah Component di React
+- Hal ini sebenarnya tidak terlalu direkomendasikan, terutama jika misal data yang memicu perubahan Element di Component bersumber dari berbagai Event Handler
+- Oleh karena itu, hal yang direkomendasikan adalah menggunakan State, yang akan kita bahas di materi selanjutnya
+
 
 contoh di file :
 - [src\form\SayHelloForm.jsx](src\form\SayHelloForm.jsx)
 - [src\hello-world\main.jsx](src\hello-world\main.jsx)
+
+
+# Hooks
+## Hooks
+- Hooks adalah fitur di React yang bisa digunakan di Component
+- Ada banyak sekali fitur yang bisa kita gunakan di React Hooks, dan kita akan bahas secara bertahap
+- [https://react.dev/reference/react/hooks](https://react.dev/reference/react/hooks)
