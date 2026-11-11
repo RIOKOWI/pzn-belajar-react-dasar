@@ -7,6 +7,7 @@ import AlertButton from "../button/AlertButton";
 import Toolbar from "../button/Toolbar";
 import Container from "../container/container";
 import MyButton from "../button/MyButton";
+import SearchForm from "../form/SearchForm";
 
 createRoot(document.getElementById("root")) // id root untuk di pakai di html nantinya
     .render(
@@ -22,6 +23,7 @@ createRoot(document.getElementById("root")) // id root untuk di pakai di html na
                     e.stopPropagation() // untuk menghindari 2x trigger event handler
                     alert("You hit me");
                 }}/>
+                <SearchForm/>
             </Container>
         </StrictMode>
     )

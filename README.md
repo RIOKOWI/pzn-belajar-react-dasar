@@ -338,5 +338,11 @@ contoh di file :
 - [https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation](https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation)
 
 
+## Prevent Default
+- Selain menghentikan Event Propagation, hal yang biasa kita lakukan ketika membuat Event Handler adalah menghentikan default action menggunakan preventDefault()
+- [https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault )
+- Misal kita membuat Form, ketika di dipicu Event onClick, kita ingin hentikan default action Form Submit
+
+
 contoh di file :
-- [src\button\AlertButton.jsx](src\button\AlertButton.jsx)
+- [src\form\SearchForm.jsx](src\form\SearchForm.jsx)
