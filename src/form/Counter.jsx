@@ -16,18 +16,39 @@ export default function Counter(){
     // )
     // diatas contoh code state yang salah
 
-    let [counter, setCounter] = useState(0); // set default value pakai use state yang mengembalikan array nantinya
+    // let [counter, setCounter] = useState(0); // set default value pakai use state yang mengembalikan array nantinya
+
+    // function handleClick(){
+    //     setCounter(counter + 1) // increment saat di tekan
+    //     console.log(counter); // debug log
+    // }
+    // return (
+    //     <div>
+    //         <button onClick={handleClick}> {/* yang menghandle use state */}
+    //             Increment
+    //         </button>
+    //         <h1>Counter : {counter}</h1> {/* state akan di render ulang dan bertambah */}
+    //     </div>
+    // )
+
+
+    // PROOF SNAPSHOT
+    let [counter, setCounter] = useState(0);
 
     function handleClick(){
-        setCounter(counter + 1) // increment saat di tekan
-        console.log(counter); // debug log
+        setCounter(counter + 1) // 0 + 1
+        setCounter(counter + 1) // 0 + 1
+        setCounter(counter + 1) // 0 + 1
+        // data snapshot di variable counter(0) tidak akan berubah karna konsep snapshot di state itu merender ulang atau membuat snapshot baru
+        // jadi saat di klik tidak akan +3 karna event ngecek jika ada 1 state sama yang berubah tidak akan di rubah lagi dan akan di render ulang 1x bukan 3x
+        console.log(counter);
     }
     return (
         <div>
-            <button onClick={handleClick}> {/* yang menghandle use state */}
-                Increment
+            <button onClick={handleClick}>
+                Increment +3
             </button>
-            <h1>Counter : {counter}</h1> {/* state akan di render ulang dan bertambah */}
+            <h1>Counter : {counter}</h1>
         </div>
     )
 

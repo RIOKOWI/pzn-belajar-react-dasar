@@ -428,6 +428,18 @@ contoh di file :
 - Sedangkan untuk proses render ulang, React akan mencoba melakukan perubahan seminimal mungkin untuk menyamakan DOM saat ini dengan hasil rendering
 - React hanya akan mengubah element di DOM, jika memang element tersebut berbeda dari hasil rendering
 
+# Snapshot
+## Snapshot
+- Variable State sekilas mungkin terlihat seperti variable JavaScript biasa
+- Tapi sebenarnya, State itu mirip seperti snapshot (kondisi saat itu). Mengubah nilai variable State tidak akan mengubah Snapshot, melainkan akan memicu render ulang untuk membuat Snapshot baru
+- Kita mungkin berpikir bahwa tampilan web berubah secara langsung karena response dari event yang dilakukan oleh pengguna, seperti klik tombol
+- Namun sebenarnya tidak seperti itu, kita sudah tahu di materi sebelumnya, ketika terjadi perubahan State, itu akan memicu render ulang, sehingga akan membuat Snapshot baru yang ditampilkan di layar
+
+
+## Kesalahan Mengubah State
+- Paham tentang Snapshot ini, akan memberi gambaran cara pandang kita terhadap data di State
+- Berikut adalah contoh kesalahan yang biasa dilakukan ketika mengubah State
+- Kita berpikir jika mengubah State, saat itu juga data akan berubah, padahal mengubah State sebenarnya hanyalah mentrigger render ulang dengan nilai state yang baru
 
 
 contoh di file :
