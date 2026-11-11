@@ -9,6 +9,7 @@ import Container from "../container/container";
 import MyButton from "../button/MyButton";
 import SearchForm from "../form/SearchForm";
 import SayHelloForm from "../form/SayHelloForm";
+import Counter from "../form/Counter";
 
 createRoot(document.getElementById("root")) // id root untuk di pakai di html nantinya
     .render(
@@ -26,6 +27,7 @@ createRoot(document.getElementById("root")) // id root untuk di pakai di html na
                 }}/>
                 <SearchForm/>
                 <SayHelloForm/>
+                <Counter/>
             </Container>
         </StrictMode>
     )

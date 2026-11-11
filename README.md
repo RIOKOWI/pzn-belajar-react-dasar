@@ -371,3 +371,20 @@ contoh di file :
 - Hooks adalah fitur di React yang bisa digunakan di Component
 - Ada banyak sekali fitur yang bisa kita gunakan di React Hooks, dan kita akan bahas secara bertahap
 - [https://react.dev/reference/react/hooks](https://react.dev/reference/react/hooks)
+
+
+# State
+## State
+- Component kadang perlu untuk berubah dikarenakan interaksi yang dilakukan pengguna
+- Misal, input di klik bisa menaikkan data counter. Tombol next bisa mengubah gambar banner yang sedang muncul, dan lain-lain
+- Component harus bisa mengingat nilai saat ini, seperti counter saat ini, gambar saat ini, dan lain-lain
+- Di React, memori spesific di Component disebut State
+
+## State Menggunakan Local Variable Biasa
+- Apakah local variabel biasa di Component bisa digunakan untuk State? Sayangnya hal ini tidak bisa dilakukan
+- Ketika React melakukan render Component untuk yang kedua kali dan seterusnya, maka semua kode Component akan dieksekusi ulang, oleh karena itu local variable akan kembali ke nilai awal
+- Perubahan di local variable juga, tidak akan memicu render ulang Component
+
+contoh di file :
+- [src\form\SayHelloForm.jsx](src\form\SayHelloForm.jsx)
+
