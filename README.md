@@ -477,3 +477,8 @@ contoh di file :
 - Hal ini direkomendasikan agar kita tidak salah mengubah data langsung, padahal kita tahu bahwa mengubah data tidak akan memicu proses render ulang
 - Untungnya di JavaScript kita bisa menggunakan Spread Syntax untuk membantu meng-copy attribute di Object
 
+
+contoh di file :
+- [vite.config.js](vite.config.js)
+- [src\contact\main.jsx](src\contact\main.jsx)
+- [src\contact\ContactForm.jsx](src\contact\ContactForm.jsx)
