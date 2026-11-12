@@ -505,9 +505,28 @@ contoh di file :
 npm install immer use-immer
 ```
 
-
-
 contoh di file :
 - [vite.config.js](vite.config.js)
 - [src\contact\main.jsx](src\contact\main.jsx)
 - [src\contact\ContactForm.jsx](src\contact\ContactForm.jsx)
+
+# Array di State
+## Array di State
+- Sama seperti Object, Array di State juga harus kita perlakukan sebagai Immutable data
+- Artinya operasi menambah data, mengubah atau menghapus data di Array, kita harus buat Array baru untuk di update ke State
+- Hal ini memang agak menyulitkan, oleh karena itu dengan bantuan library seperti Immer, hal ini jadi lebih mudah
+
+## Mengubah Array
+
+|             | Hindari            | Gunakan                         |
+|-------------|--------------------|---------------------------------|
+| Menambah    | `push`, `unshift`   | `concat`, `[...arr]` spread syntax |
+| Menghapus   | `pop`, `shift`, `splice` | `filter`, `slice`          |
+| Mengubah    | `splice`, `arr[i] = …` | `map`                    |
+| Mengurutkan | `reverse`, `sort`   | Buat array baru                  |
+
+contoh di file :
+- [vite.config.js](vite.config.js)
+- [task.html](task.html)
+- [src\task\main.jsx](src\task\main.jsx)
+- [src\task\Task.jsx](src\task\Task.jsx)
