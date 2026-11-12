@@ -558,8 +558,16 @@ contoh di file :
 - Misal, kita akan membuat Component Counter bisa dihilangkan
 - Ketika nanti Component tersebut dihilangkan dari tampilan, mana secara otomatis State nya juga akan hilang
 
+## Component Sama di Posisi Sama
+- Jika terdapat kasus kita menampilkan Component yang sama
+- Tapi secara struktur UI dia berada di posisi yang sama
+- Maka State akan dipertahankan oleh React, yang artinya tidak akan dihapus
+- Hal ini mungkin akan membingungkan, tapi kita harus mengerti hal ini, karena React akan menyimpan informasi State mengikuti Posisi Component, jika Component nya sama, dan posisinya sama, maka State akan dipertahankan
 
-
+## Kenapa State Masih Sama?
+- Hal ini terjadi karena secara struktur UI, posisi Component ada di posisi yang sama
+- Jika posisi Component dan jenis Component nya sama, secara otomatis React akan mempertahankan State 
+- Kecuali posisinya berubah atau Component nya berbeda, maka React akan menghapus State nya
 
 contoh di file :
 - [vite.config.js](vite.config.js)

@@ -11,8 +11,9 @@ export default function CounterApp(){
 
     return (
         <div>
-            <Counter/>
-            {show2 && <Counter/>}
+            {/* <Counter/>
+            {show2 && <Counter/>} */}
+            {show2 ? <Counter name="kowi"/> : <Counter name="rio"/>} {/* kenapa counter 1 & 2 state nya gak kereset saat component nya hilang? karna posisi component nya sama maka react tidak akan mereset */}
             <input type="checkbox" checked={show2} onChange={handleChange} /> Show Counter 2
             {/* jika component di hapus dari page maka state nya juga akan hilang */}
         </div>
