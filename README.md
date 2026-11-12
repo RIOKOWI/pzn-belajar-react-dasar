@@ -544,5 +544,19 @@ contoh di file :
 - [src\task\TaskForm.jsx](src\task\TaskForm.jsx)
 
 
+# Mempertahankan State
+## Mempertahankan State
+- State terisolasi antar Component. React melacak State mana yang dimiliki oleh Component berdasarkan tempatnya di struktur UI
+- Kita bisa mengatur, kapan kita ingin mempertahankan State, kapan kita akan mereset State
+- State sendiri tidak disimpan di dalam Component. State itu disimpan di React, sedangkan ketika kita menggunakan State di Component, maka sebenarnya kita akan menggunakan State yang ada di React
+- Cara React bisa tahu State mana yang digunakan oleh Component adalah, melihat posisi Component di struktur UI
+
+contoh di file :
+- [vite.config.js](vite.config.js)
+- [src\counter\main.jsx](src\counter\main.jsx)
+- [src\counter\Counter.jsx](src\counter\Counter.jsx)
+
+
+
 
 
