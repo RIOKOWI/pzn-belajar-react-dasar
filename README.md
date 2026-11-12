@@ -551,10 +551,23 @@ contoh di file :
 - State sendiri tidak disimpan di dalam Component. State itu disimpan di React, sedangkan ketika kita menggunakan State di Component, maka sebenarnya kita akan menggunakan State yang ada di React
 - Cara React bisa tahu State mana yang digunakan oleh Component adalah, melihat posisi Component di struktur UI
 
+## Posisi Component
+- Seperti dijelaskan sebelumnya, React menyimpan State sesuai dengan posisi Component
+- Ketika posisi Componen berubah, misal hilang dari tampilan layar
+- Secara otomatis State akan dihapus dari React
+- Misal, kita akan membuat Component Counter bisa dihilangkan
+- Ketika nanti Component tersebut dihilangkan dari tampilan, mana secara otomatis State nya juga akan hilang
+
+
+
+
 contoh di file :
 - [vite.config.js](vite.config.js)
 - [src\counter\main.jsx](src\counter\main.jsx)
 - [src\counter\Counter.jsx](src\counter\Counter.jsx)
+- [src\counter\CounterApp.jsx](src\counter\CounterApp.jsx)
+
+
 
 
 
