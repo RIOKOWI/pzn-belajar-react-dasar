@@ -621,5 +621,9 @@ contoh di file :
 - Agar ada gambaran, kita akan coba membuat Component dengan State yang banyak di update tanpa menggunakan Reducer terlebih dahulu, nanti kita akan ubah menjadi menggunakan Reducer
 
 
+contoh di file :
+- [src\note](src\note)
+- [vite.config.js](vite.config.js)
+- [note.html](note.html)
 
 
