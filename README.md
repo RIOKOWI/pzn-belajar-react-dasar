@@ -576,6 +576,27 @@ contoh di file :
 - [src\counter\CounterApp.jsx](src\counter\CounterApp.jsx)
 
 
+# Reset State
+## Reset State
+- Sekarang kita tahu bagaimana React mempertahankan data State
+- Lantas bagaimana jika misal, pada kondisi tertentu, kita memang ingin melakukan Reset State, tidak mau mempertahankan State nya?
+- Ada beberapa cara untuk me-reset State
+- Yang pernah kita lakukan di materi sebelumnya adalah dengan cara menghapus Component dari tampilan UI
+- Ketika Component hilang dari tampilan UI, secara otomatis State akan ikut hilang
+
+## Mengubah Dengan Component Lain
+- Selain menghapus Component, kita juga bisa mengubah Component dengan Component lain di posisi yang sama
+- Ketika posisi yang sama masih ada di struktur UI, tapi Component nya berbeda, secara otomatis State juga akan di reset
+- Misal sebelumnya kita menampilkan Component Counter, lalu kita ubah menjadi element paragraph. Secara otomatis State di Component Counter akan dihapus
+- [https://docs.google.com/presentation/d/1HmgGmA1LpK78pF3ECQMSDrXEjk6wAgR5yaQxrbR6E18/edit?slide=id.g31cef895ca3_0_1188#slide=id.g31cef895ca3_0_1188](https://docs.google.com/presentation/d/1HmgGmA1LpK78pF3ECQMSDrXEjk6wAgR5yaQxrbR6E18/edit?slide=id.g31cef895ca3_0_1188#slide=id.g31cef895ca3_0_1188)
+
+## Mengubah Posisi Component
+- Karena React akan menyimpan State sesuai dengan Component dan posisinya
+- Artinya jika posisi Component diubah atau dipindahkan, secara otomatis State juga akan di reset
+
+contoh di file :
+- [vite.config.js](vite.config.js)
+- [src\counter\CounterApp.jsx](src\counter\CounterApp.jsx)
 
 
 
