@@ -594,6 +594,13 @@ contoh di file :
 - Karena React akan menyimpan State sesuai dengan Component dan posisinya
 - Artinya jika posisi Component diubah atau dipindahkan, secara otomatis State juga akan di reset
 
+## Posisi Component Berbeda
+- Selain mengubah posisi, kita juga bisa jika Component sama berada di posisi yang berbeda, secara otomatis State nya juga akan berbeda
+- Ini mungkin akan membingungkan, karena secara DOM mungkin posisinya sama, tapi secara posisi di Component berbeda
+- [https://docs.google.com/presentation/d/1HmgGmA1LpK78pF3ECQMSDrXEjk6wAgR5yaQxrbR6E18/edit?slide=id.g31cef895ca3_0_1232#slide=id.g31cef895ca3_0_1232](https://docs.google.com/presentation/d/1HmgGmA1LpK78pF3ECQMSDrXEjk6wAgR5yaQxrbR6E18/edit?slide=id.g31cef895ca3_0_1232#slide=id.g31cef895ca3_0_1232)
+
+
+
 contoh di file :
 - [src\counter\CounterApp.jsx](src\counter\CounterApp.jsx)
 

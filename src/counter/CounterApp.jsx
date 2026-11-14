@@ -17,7 +17,7 @@ export default function CounterApp(){
             {/* {show2 ? <Counter name="kowi"/> : <p>Hilang</p>} reset state dengan cara change element */}
 
             {/* reset state component */}
-            {show2 ? (
+            {/* {show2 ? (
                 <div>
                     <Counter name="kowi"/>
                 </div>
@@ -26,7 +26,12 @@ export default function CounterApp(){
                     <section>
                         <Counter name="jow"/> 
                     </section>    
-                )}
+                )} */}
+
+            {/* posisinya berbeda */}
+            {!show2 && <Counter name="kowi"/>} 
+            {show2 && <Counter name="rio"/>}
+            
             <input type="checkbox" checked={show2} onChange={handleChange} /> Show Counter 2
             {/* jika component di hapus dari page maka state nya juga akan hilang */}
         </div>
