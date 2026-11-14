@@ -13,15 +13,15 @@ export default function Note({note, onChange, onDelete}){
     if (isEditing){ // jika kondisi sedanng edit 
         component = ( // render component dengan
             <>
-            <input type="text" value={note.text} onnChange={handleChangeText} /> {/* element input yang handle perubahan text */}
+            <input type="text" value={note.text} onChange={handleChangeText} /> {/* element input yang handle perubahan text */}
             <button onClick={() => setIsEditing(false)}>Save</button> {/* dan element button yang menhandle set kondisi editing menjadi false */}
             </>
         )
     } else { // jika kondisi tidak sedang di edit
         component = ( // render component dengan element
             <>
-                {note.text} {/* text isi dari object note */}
-                <button onClick={() => setIsEditing(true)}>Edit</button> {/* dan button edit dengan mengubah kondisi editing nya menjadi true */}
+                {note.text}  {/* text isi dari object note */}
+                <button onClick={() => setIsEditing(true)} onChange={handleChangeText}>Edit</button> {/* dan button edit dengan mengubah kondisi editing nya menjadi true */}
             </>
         )
     }

@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 export default function NoteForm({onAddNote}){
-    const [text, setText] = useState("")
+    const [text, setText] = useState('')
 
     function handleChange(e){ // handle perubahan text
         setText(e.target.value)
     }
 
     function handleClick(){
-        setText("");
+        setText('');
         onAddNote(text) // masukan value ke variable text via props
     }
 
