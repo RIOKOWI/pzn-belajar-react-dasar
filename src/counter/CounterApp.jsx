@@ -29,8 +29,11 @@ export default function CounterApp(){
                 )} */}
 
             {/* posisinya berbeda */}
-            {!show2 && <Counter name="kowi"/>} 
-            {show2 && <Counter name="rio"/>}
+            {/* {!show2 && <Counter name="kowi"/>} 
+            {show2 && <Counter name="rio"/>} */}
+
+            {/* using key best practice */}
+            {show2 ? <Counter key="1" name="rio"/> : <Counter key="2" name="kowi"/>}
             
             <input type="checkbox" checked={show2} onChange={handleChange} /> Show Counter 2
             {/* jika component di hapus dari page maka state nya juga akan hilang */}

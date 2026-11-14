@@ -599,6 +599,10 @@ contoh di file :
 - Ini mungkin akan membingungkan, karena secara DOM mungkin posisinya sama, tapi secara posisi di Component berbeda
 - [https://docs.google.com/presentation/d/1HmgGmA1LpK78pF3ECQMSDrXEjk6wAgR5yaQxrbR6E18/edit?slide=id.g31cef895ca3_0_1232#slide=id.g31cef895ca3_0_1232](https://docs.google.com/presentation/d/1HmgGmA1LpK78pF3ECQMSDrXEjk6wAgR5yaQxrbR6E18/edit?slide=id.g31cef895ca3_0_1232#slide=id.g31cef895ca3_0_1232)
 
+## Menggunakan Key
+- Cara yang umum biasanya digunakan untuk mereset State, yaitu menambahkan key pada Component
+- Saat Component yang sama ditampilkan di posisi yang sama, jika key nya berbeda, maka akan dianggap Component yang berbeda, dengan demikian, secara otomatis State akan di reset
+- Ini mungkin cara yang paling direkomendasikan, dibanding harus mengubah-ubah posisi Component
 
 
 contoh di file :
