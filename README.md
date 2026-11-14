@@ -595,7 +595,6 @@ contoh di file :
 - Artinya jika posisi Component diubah atau dipindahkan, secara otomatis State juga akan di reset
 
 contoh di file :
-- [vite.config.js](vite.config.js)
 - [src\counter\CounterApp.jsx](src\counter\CounterApp.jsx)
 
 
