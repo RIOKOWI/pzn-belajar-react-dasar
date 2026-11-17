@@ -1,6 +1,7 @@
 import { useImmer } from "use-immer";
 import NoteForm from "./NoteForm"
 import NoteList from "./NoteList";
+import { useReducer } from "react";
 
 
 let id = 0;
@@ -36,29 +37,43 @@ function notesReducer(notes, action){ // membuat function notesReducer dengan pa
 
 
 export default function NoteApp(){
-    const [notes, setNotes] = useImmer(initialData);
+    // const [notes, setNotes] = useImmer(initialData);
+    const [notes, dispatch] = useReducer(notesReducer, initialData);
 
     function handleAddNote(text){
-        setNotes(draft => {
-            draft.push({
-                id: id++,
-                text: text,
-                done: false
-            })
+        // setNotes(draft => {
+        //     draft.push({
+        //         id: id++,
+        //         text: text,
+        //         done: false
+        //     })
+        // })
+
+        dispatch({
+            type: "ADD_NOTE", // pake case yang ada di func reducer
+            text: text // ambil isi dari value text
         })
     }
 
     function handleChangeNote(note){
-        setNotes(draft => {
-            const index = draft.findIndex(item => item.id === note.id);
-            draft[index] = note;
+        // setNotes(draft => {
+        //     const index = draft.findIndex(item => item.id === note.id);
+        //     draft[index] = note;
+        // })
+        dispatch({
+            ...note,
+            type: "CHANGE_NOTE" // pake case yang ada di func reducer
         })
     }
     
     function handleDeleteNote(note){
-        setNotes(draft => {
-            const index = draft.findIndex(item => item.id === note.id);
-            draft.splice(index, 1);
+        // setNotes(draft => {
+        //     const index = draft.findIndex(item => item.id === note.id);
+        //     draft.splice(index, 1);
+        // })
+        dispatch({
+            type: "DELETE_NOTE", // pake case yang ada di func reducer
+            id: note.id // delete by id
         })
     }
 
