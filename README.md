@@ -728,3 +728,18 @@ contoh di file :
 contoh di file :
 - [src\timer](src\timer)
 - [src\button\AlertButton.jsx](src\button\AlertButton.jsx)
+
+
+# Manipulasi DOM dengan Ref
+## Manipulasi DOM dengan Ref
+- React secara otomatis akan mengupdate DOM ketika melakukan render ulang, jadi kita tidak perlu memanipulasi DOM secara manual lagi
+- Tapi, kadang kita mungkin perlu mengakses DOM secara manual, contoh memindahkan fokus ke salah satu element, atau scroll ke element tertentu, dan lain-lain
+- Sayangnya, tidak ada cara untuk melakukan hal ini menggunakan React, jadi kita perlu tangani hal ini secara manual
+- Salah satu caranya kita menggunakan Ref menuju ke DOM element
+- Caranya, pada element nya, kita bisa tambahkan attribute ref
+
+
+contoh di file :
+- [src\guestbook](src\guestbook)
+- [guestbook.html](guestbook.html)
+- [vite.config.js](vite.config.js)
