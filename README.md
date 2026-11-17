@@ -743,6 +743,13 @@ contoh di file :
 - Jika kita menambahkan Ref ke Component, maka attribute current akan bernilai null
 - Kita akan coba praktekan ini dengan membuat GuestBookInput Component
 
+## Mengakses Component DOM Element
+- Karena Component tidak bisa dijadikan sebagai Ref, oleh karena itu, jika kita ingin menggunakan Ref untuk Component, kita bisa menggunakan Props
+- Kita bisa membuat Props ref yang kita isi Ref 
+- Props ref bisa kita gunakan pada DOM element di dalam Component tersebut
+- Sekarang kita coba tambahkan Ref ke dalam Component GuestBookInput
+
+
 
 contoh di file :
 - [src\guestbook](src\guestbook)

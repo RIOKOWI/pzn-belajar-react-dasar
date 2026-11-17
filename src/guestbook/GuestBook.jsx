@@ -25,7 +25,8 @@ export default function GuestBook(){
                 <label htmlFor="name">Name</label>
                 <br/>
                 {/* <GuestBookForm name={name} setName={setName} ref={nameInput}/> gabakal bisa karna component tidak bisa di jadikan reference */}
-                <input type="text" name="name" ref={nameInput} value={name} onChange={(e) => setName(e.target.value)}/> {/* ambil input value dari name dan masukin ke state setName. dan ref fokus ke element ini karna namInput */}
+                <GuestBookForm name={name} setName={setName} ref={nameInput}/> {/* ini baru bisa karna di kirim sebagai props */}
+                {/* <input type="text" name="name" ref={nameInput} value={name} onChange={(e) => setName(e.target.value)}/> ambil input value dari name dan masukin ke state setName. dan ref fokus ke element ini karna namInput */}
                 <br/>
                 <label htmlFor="message">Message</label>
                 <br />
