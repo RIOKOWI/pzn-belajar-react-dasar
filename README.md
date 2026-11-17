@@ -633,6 +633,10 @@ contoh di file :
 - Return function nya adalah State selanjutnya
 
 
+## Menggunakan Immer
+- Library Use-Immer juga mendukung Reducer, sehingga kita bisa lebih mudah karena kita bisa mengedit data draft dibanding membuat data baru dari State yang ada
+- Kita bisa menggunakan method useImmerReducer()
+
 
 
 contoh di file :
