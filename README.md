@@ -709,4 +709,22 @@ contoh di file :
 
 
 
+# Ref
+## Ref Hooks
+- Fitur Hooks yang lain selain State dan Context, adalah Ref Hooks
+- Ketika kita ingin Component mengingat informasi, tapi tidak mau memicu render ulang, maka kita bisa menggunakan Ref
+- Menggunakan Ref Hooks bisa menggunakan method useRef()
+- [https://react.dev/reference/react/useRef](https://react.dev/reference/react/useRef)
+- Function useRef() akan mengembalikan Object yang memiliki attribute current, dimana attribute current berisi value yang dipegang oleh Ref
 
+| Ref                           | State |
+| ---------------------------------- | ----- |
+| userRef(initial) mengembalikan object {current: initial}             | useState(initial) mengembalikan [value, setValue]   |
+| Tidak memicu render ulang ketika diubah             | Memicu render ulang ketika diubah     |
+| Mutable, bisa dimodifikasi dan diubah current value nya             | Immutable, kita hanya bisa mengubah menggunakan function setValue     |
+| Tidak direkomendasikan membaca atau menulis current value ketika proses rendering. Lebih cocok dibaca atau diubah pada Event Handler             | Bisa dibaca kapanpun, tapi tiap render akan memiliki Snapshot masing-masing     |
+                                            
+
+contoh di file :
+- [src\timer](src\timer)
+- [src\button\AlertButton.jsx](src\button\AlertButton.jsx)

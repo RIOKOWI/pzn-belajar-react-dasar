@@ -16,6 +16,7 @@ export default defineConfig({
         counter: 'counter.html',
         note: 'note.html',
         profle: 'profile.html',
+        timer: 'timer.html',
       }
     }
   }
