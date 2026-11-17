@@ -2,6 +2,8 @@ import { useImmer, useImmerReducer } from "use-immer";
 import NoteForm from "./NoteForm"
 import NoteList from "./NoteList";
 import { useReducer } from "react";
+import { NotesContext } from "./NoteContext";
+import { NotesDispatchContext } from "./NoteContext";
 
 
 let id = 0;
@@ -60,49 +62,56 @@ export default function NoteApp(){
     // const [notes, dispatch] = useReducer(notesReducer, initialData); // menggunakan reducer
     const [notes, dispatch] = useImmerReducer(notesReducer, initialData); // menggunakan useImmerReducer
 
-    function handleAddNote(text){
-        // setNotes(draft => {
-        //     draft.push({
-        //         id: id++,
-        //         text: text,
-        //         done: false
-        //     })
-        // })
+    // function handleAddNote(text){
+    //     // setNotes(draft => {
+    //     //     draft.push({
+    //     //         id: id++,
+    //     //         text: text,
+    //     //         done: false
+    //     //     })
+    //     // })
 
-        dispatch({
-            type: "ADD_NOTE", // pake case yang ada di func reducer
-            text: text // ambil isi dari value text
-        })
-    }
+    //     dispatch({
+    //         type: "ADD_NOTE", // pake case yang ada di func reducer
+    //         text: text // ambil isi dari value text
+    //     })
+    // }
 
-    function handleChangeNote(note){
-        // setNotes(draft => {
-        //     const index = draft.findIndex(item => item.id === note.id);
-        //     draft[index] = note;
-        // })
-        dispatch({
-            ...note,
-            type: "CHANGE_NOTE" // pake case yang ada di func reducer
-        })
-    }
+    // function handleChangeNote(note){
+    //     // setNotes(draft => {
+    //     //     const index = draft.findIndex(item => item.id === note.id);
+    //     //     draft[index] = note;
+    //     // })
+    //     dispatch({
+    //         ...note,
+    //         type: "CHANGE_NOTE" // pake case yang ada di func reducer
+    //     })
+    // }
     
-    function handleDeleteNote(note){
-        // setNotes(draft => {
-        //     const index = draft.findIndex(item => item.id === note.id);
-        //     draft.splice(index, 1);
-        // })
-        dispatch({
-            type: "DELETE_NOTE", // pake case yang ada di func reducer
-            id: note.id // delete by id
-        })
-    }
+    // function handleDeleteNote(note){
+    //     // setNotes(draft => {
+    //     //     const index = draft.findIndex(item => item.id === note.id);
+    //     //     draft.splice(index, 1);
+    //     // })
+    //     dispatch({
+    //         type: "DELETE_NOTE", // pake case yang ada di func reducer
+    //         id: note.id // delete by id
+    //     })
+    // }
 
 
     return (
         <div>
-            <h1>Note App</h1>
+            {/* <h1>Note App</h1>
             <NoteForm onAddNote={handleAddNote}/>
-            <NoteList notes={notes} onChange={handleChangeNote} onDelete={handleDeleteNote}/>
+            <NoteList notes={notes} onChange={handleChangeNote} onDelete={handleDeleteNote}/> */}
+            <NotesContext.Provider value={notes}>
+                <NotesDispatchContext.Provider value={dispatch}>
+                    <h1>Note App</h1>
+                    <NoteForm/>
+                    <NoteList/>
+                </NotesDispatchContext.Provider>
+            </NotesContext.Provider>
         </div>
     )
 

@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { NotesDispatchContext } from "./NoteContext";
 
-export default function NoteForm({onAddNote}){
+// export default function NoteForm({onAddNote}){ OG before context reducer
+export default function NoteForm(){
     const [text, setText] = useState('')
+    const dispatch = useContext(NotesDispatchContext)
 
     function handleChange(e){ // handle perubahan text
         setText(e.target.value)
@@ -9,7 +12,11 @@ export default function NoteForm({onAddNote}){
 
     function handleClick(){
         setText('');
-        onAddNote(text) // masukan value ke variable text via props
+        dispatch({ // with context
+            type: "ADD_NOTE",
+            text: text
+        })
+        // onAddNote(text) // masukan value ke variable text via props
     }
 
     return (

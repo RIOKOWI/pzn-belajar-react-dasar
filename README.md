@@ -683,8 +683,30 @@ contoh di file :
 - Selain itu, Component di bawahnya hanya bisa membaca data dari Context, tidak bisa mengubah data di Context
 - Oleh karena itu, jika kita ingin membuat data di Context bisa diubah dengan mudah, kita bisa menggunakan bantuan State
 
+## Sebelum Menggunakan Context
+- Context mungkin lebih mudah digunakan dibanding mengirim semua data State via Props
+- Tapi jangan terlalu sering menggunakan Context sampai ke hal yang sederhana
+- Gunakan Context jika memang perlu, jika masih sederhana, bisa gunakan State dan Props dulu, jika sudah terlalu kompleks dan terlalu dalam mengirim Props nya, baru diubah ke Context
+
+
 contoh di file :
 - [src\profile](src\profile\)
+
+
+# Context dan Reducer
+## Context dan Reducer
+- Sebelumnya kita sudah bahas tentang Reducer, sama seperti State, Reducer juga bisa kita integrasikan dengan Context
+- Pada kasus ketika kita membuat Component yang sudah kompleks, dan menggunakan Reducer, kita bisa mengirim semua State dan Reducer menggunakan Context ke child Component
+- Sehingga lebih mudah dibanding menggunakan Props
+- Misal kita coba modifikasi halaman Notes yang sebelumnya sudah kita buat
+
+## Pindahkan Event Handler
+- Karena method Dispatch ada di Context, jadi kita tidak perlu mengirim Event Handler lagi dari Parent Component ke Child Component melalui Props
+- Kita bisa langsung pindahkan ke Child Component, karena Child Component bisa mengakses Dispatch Function
+
+contoh di file :
+- [src\note](src\note)
+
 
 
 
