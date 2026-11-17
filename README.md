@@ -738,6 +738,11 @@ contoh di file :
 - Salah satu caranya kita menggunakan Ref menuju ke DOM element
 - Caranya, pada element nya, kita bisa tambahkan attribute ref
 
+## Ref untuk Component
+- Ref hanya bisa digunakan di DOM element, kita tidak bisa menggunakan ref di Component
+- Jika kita menambahkan Ref ke Component, maka attribute current akan bernilai null
+- Kita akan coba praktekan ini dengan membuat GuestBookInput Component
+
 
 contoh di file :
 - [src\guestbook](src\guestbook)
