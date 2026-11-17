@@ -1,12 +1,11 @@
 import GuestBook from "./GuestBook";
-
-const { StrictMode } = require("react");
-const { createRoot } = require("react-dom/client");
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 
 
 createRoot(document.getElementById("root"))
     .render(
         <StrictMode>
-
+            <GuestBook/>
         </StrictMode>
     )
