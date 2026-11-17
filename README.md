@@ -620,6 +620,20 @@ contoh di file :
 - Pada kasus seperti ini, kita bisa mengkonsolidasi semua logic untuk update State di sebuah Function diluar Component, atau kita sebut Reducer
 - Agar ada gambaran, kita akan coba membuat Component dengan State yang banyak di update tanpa menggunakan Reducer terlebih dahulu, nanti kita akan ubah menjadi menggunakan Reducer
 
+## Menggunakan Reducer
+- Sekarang kita akan fokus ke NoteApp.jsx
+- Kita bisa lihat bahwa terdapat 3 aksi untuk update notes, ada add, update dan delete. Dan itu semua disimpan di dalam function yang berbeda-beda dan dari Event Handler yang berbeda-beda
+- Menggunakan Reducer agak sedikit berbeda dengan mengubah State secara langsung. Alih-alih memberi tahu ke React apa yang harus dilakukan dengan mengubah State, menggunakan Reducer kita memberi tahu React apa yang sudah dilakukan pengguna (action)
+- Implementasi logic dari action nya dilakukan ditempat yang terpisah
+
+
+## Membuat Reducer Function
+- Reducer Function adalah kode dimana kita menyimpan logic kita
+- Reducer Function memiliki dua parameter, State saat ini, dan Action object
+- Return function nya adalah State selanjutnya
+
+
+
 
 contoh di file :
 - [src\note](src\note)
