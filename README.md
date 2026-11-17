@@ -671,8 +671,20 @@ contoh di file :
 - [https://react.dev/reference/react/createContext#provider](https://react.dev/reference/react/createContext#provider)
 
 
+contoh di file :
+- [src\profile](src\profile\)
+- [vite.config.js](vite.config.js)
+
+
+# Context dan State
+## Context dan State
+- Untuk mengubah Context, kita harus menggunakan Provider
+- Hal ini karena Context itu hanya bisa diakses oleh Component di bawahnya, tidak bisa Component diatasnya atau yang sejajar
+- Selain itu, Component di bawahnya hanya bisa membaca data dari Context, tidak bisa mengubah data di Context
+- Oleh karena itu, jika kita ingin membuat data di Context bisa diubah dengan mudah, kita bisa menggunakan bantuan State
 
 contoh di file :
 - [src\profile](src\profile\)
+
 
 
