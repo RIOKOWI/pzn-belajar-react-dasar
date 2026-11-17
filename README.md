@@ -640,8 +640,39 @@ contoh di file :
 
 
 contoh di file :
-- [src\note](src\note)
+- [src\note](src\note\)
 - [vite.config.js](vite.config.js)
 - [note.html](note.html)
+
+
+# Context
+## Context Hooks
+- Selain State Hooks yang sudah kita bahas sebelumnya menggunakan useState() dan useReduce()
+- Masih ada Hooks yang lainnya, salah satunya adalah Context Hooks, menggunakan useContext()
+- [https://react.dev/reference/react/useContext](https://react.dev/reference/react/useContext)
+
+
+## Context
+- Biasanya, untuk mengirim informasi dari parent Component ke child Component, kita biasa menggunakan Props
+- Tapi mengirim informasi melalui banyak Component, mungkin akan membuat kita terlalu sulit melakukan maintain Props nya
+- Atau, misal saja kita punya satu informasi yang digunakan oleh banyak Component, maka mengirim ke semua Component juga akan terlalu sulit
+- Context membolehkan parent Component membuat informasi dan bisa digunakan oleh Component manapun di bawah nya, tidak peduli seberapa dalam Component di bawah nya
+- Banyak juga yang bilang jika Context adalah Global State
+
+## Diagram : Context
+- [https://docs.google.com/presentation/d/1HmgGmA1LpK78pF3ECQMSDrXEjk6wAgR5yaQxrbR6E18/edit?slide=id.g31e2c323cc1_2_84#slide=id.g31e2c323cc1_2_84](https://docs.google.com/presentation/d/1HmgGmA1LpK78pF3ECQMSDrXEjk6wAgR5yaQxrbR6E18/edit?slide=id.g31e2c323cc1_2_84#slide=id.g31e2c323cc1_2_84)
+
+## Membuat Context
+- Untuk membuat Context, kita bisa menggunakan function createContext()
+- [https://react.dev/reference/react/createContext](https://react.dev/reference/react/createContext)
+- Selanjutnya, setelah membuat Context, untuk menggunakan Context tersebut, kita bisa menggunakan useContext()
+- [https://react.dev/reference/react/useContext](https://react.dev/reference/react/useContext)
+- Untuk mengubah data di Context, kita gunakan Provider yang terdapat di Context. Secara otomatis semua  Component dibawahnya akan mendapat nilai sesuai yang kita ubah di Context Provider 
+- [https://react.dev/reference/react/createContext#provider](https://react.dev/reference/react/createContext#provider)
+
+
+
+contoh di file :
+- [src\note](src\note\)
 
 
