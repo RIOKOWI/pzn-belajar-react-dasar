@@ -673,6 +673,6 @@ contoh di file :
 
 
 contoh di file :
-- [src\note](src\note\)
+- [src\profile](src\profile\)
 
 
