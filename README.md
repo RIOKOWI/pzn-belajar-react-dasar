@@ -620,10 +620,252 @@ contoh di file :
 - Pada kasus seperti ini, kita bisa mengkonsolidasi semua logic untuk update State di sebuah Function diluar Component, atau kita sebut Reducer
 - Agar ada gambaran, kita akan coba membuat Component dengan State yang banyak di update tanpa menggunakan Reducer terlebih dahulu, nanti kita akan ubah menjadi menggunakan Reducer
 
+## Menggunakan Reducer
+- Sekarang kita akan fokus ke NoteApp.jsx
+- Kita bisa lihat bahwa terdapat 3 aksi untuk update notes, ada add, update dan delete. Dan itu semua disimpan di dalam function yang berbeda-beda dan dari Event Handler yang berbeda-beda
+- Menggunakan Reducer agak sedikit berbeda dengan mengubah State secara langsung. Alih-alih memberi tahu ke React apa yang harus dilakukan dengan mengubah State, menggunakan Reducer kita memberi tahu React apa yang sudah dilakukan pengguna (action)
+- Implementasi logic dari action nya dilakukan ditempat yang terpisah
+
+
+## Membuat Reducer Function
+- Reducer Function adalah kode dimana kita menyimpan logic kita
+- Reducer Function memiliki dua parameter, State saat ini, dan Action object
+- Return function nya adalah State selanjutnya
+
+
+## Menggunakan Immer
+- Library Use-Immer juga mendukung Reducer, sehingga kita bisa lebih mudah karena kita bisa mengedit data draft dibanding membuat data baru dari State yang ada
+- Kita bisa menggunakan method useImmerReducer()
+
+
 
 contoh di file :
-- [src\note](src\note)
+- [src\note](src\note\)
 - [vite.config.js](vite.config.js)
 - [note.html](note.html)
 
 
+# Context
+## Context Hooks
+- Selain State Hooks yang sudah kita bahas sebelumnya menggunakan useState() dan useReduce()
+- Masih ada Hooks yang lainnya, salah satunya adalah Context Hooks, menggunakan useContext()
+- [https://react.dev/reference/react/useContext](https://react.dev/reference/react/useContext)
+
+
+## Context
+- Biasanya, untuk mengirim informasi dari parent Component ke child Component, kita biasa menggunakan Props
+- Tapi mengirim informasi melalui banyak Component, mungkin akan membuat kita terlalu sulit melakukan maintain Props nya
+- Atau, misal saja kita punya satu informasi yang digunakan oleh banyak Component, maka mengirim ke semua Component juga akan terlalu sulit
+- Context membolehkan parent Component membuat informasi dan bisa digunakan oleh Component manapun di bawah nya, tidak peduli seberapa dalam Component di bawah nya
+- Banyak juga yang bilang jika Context adalah Global State
+
+## Diagram : Context
+- [https://docs.google.com/presentation/d/1HmgGmA1LpK78pF3ECQMSDrXEjk6wAgR5yaQxrbR6E18/edit?slide=id.g31e2c323cc1_2_84#slide=id.g31e2c323cc1_2_84](https://docs.google.com/presentation/d/1HmgGmA1LpK78pF3ECQMSDrXEjk6wAgR5yaQxrbR6E18/edit?slide=id.g31e2c323cc1_2_84#slide=id.g31e2c323cc1_2_84)
+
+## Membuat Context
+- Untuk membuat Context, kita bisa menggunakan function createContext()
+- [https://react.dev/reference/react/createContext](https://react.dev/reference/react/createContext)
+- Selanjutnya, setelah membuat Context, untuk menggunakan Context tersebut, kita bisa menggunakan useContext()
+- [https://react.dev/reference/react/useContext](https://react.dev/reference/react/useContext)
+- Untuk mengubah data di Context, kita gunakan Provider yang terdapat di Context. Secara otomatis semua  Component dibawahnya akan mendapat nilai sesuai yang kita ubah di Context Provider 
+- [https://react.dev/reference/react/createContext#provider](https://react.dev/reference/react/createContext#provider)
+
+
+contoh di file :
+- [src\profile](src\profile\)
+- [vite.config.js](vite.config.js)
+
+
+# Context dan State
+## Context dan State
+- Untuk mengubah Context, kita harus menggunakan Provider
+- Hal ini karena Context itu hanya bisa diakses oleh Component di bawahnya, tidak bisa Component diatasnya atau yang sejajar
+- Selain itu, Component di bawahnya hanya bisa membaca data dari Context, tidak bisa mengubah data di Context
+- Oleh karena itu, jika kita ingin membuat data di Context bisa diubah dengan mudah, kita bisa menggunakan bantuan State
+
+## Sebelum Menggunakan Context
+- Context mungkin lebih mudah digunakan dibanding mengirim semua data State via Props
+- Tapi jangan terlalu sering menggunakan Context sampai ke hal yang sederhana
+- Gunakan Context jika memang perlu, jika masih sederhana, bisa gunakan State dan Props dulu, jika sudah terlalu kompleks dan terlalu dalam mengirim Props nya, baru diubah ke Context
+
+
+contoh di file :
+- [src\profile](src\profile\)
+
+
+# Context dan Reducer
+## Context dan Reducer
+- Sebelumnya kita sudah bahas tentang Reducer, sama seperti State, Reducer juga bisa kita integrasikan dengan Context
+- Pada kasus ketika kita membuat Component yang sudah kompleks, dan menggunakan Reducer, kita bisa mengirim semua State dan Reducer menggunakan Context ke child Component
+- Sehingga lebih mudah dibanding menggunakan Props
+- Misal kita coba modifikasi halaman Notes yang sebelumnya sudah kita buat
+
+## Pindahkan Event Handler
+- Karena method Dispatch ada di Context, jadi kita tidak perlu mengirim Event Handler lagi dari Parent Component ke Child Component melalui Props
+- Kita bisa langsung pindahkan ke Child Component, karena Child Component bisa mengakses Dispatch Function
+
+contoh di file :
+- [src\note](src\note)
+
+
+
+# Ref
+## Ref Hooks
+- Fitur Hooks yang lain selain State dan Context, adalah Ref Hooks
+- Ketika kita ingin Component mengingat informasi, tapi tidak mau memicu render ulang, maka kita bisa menggunakan Ref
+- Menggunakan Ref Hooks bisa menggunakan method useRef()
+- [https://react.dev/reference/react/useRef](https://react.dev/reference/react/useRef)
+- Function useRef() akan mengembalikan Object yang memiliki attribute current, dimana attribute current berisi value yang dipegang oleh Ref
+
+| Ref                           | State |
+| ---------------------------------- | ----- |
+| userRef(initial) mengembalikan object {current: initial}             | useState(initial) mengembalikan [value, setValue]   |
+| Tidak memicu render ulang ketika diubah             | Memicu render ulang ketika diubah     |
+| Mutable, bisa dimodifikasi dan diubah current value nya             | Immutable, kita hanya bisa mengubah menggunakan function setValue     |
+| Tidak direkomendasikan membaca atau menulis current value ketika proses rendering. Lebih cocok dibaca atau diubah pada Event Handler             | Bisa dibaca kapanpun, tapi tiap render akan memiliki Snapshot masing-masing     |
+                                            
+
+contoh di file :
+- [src\timer](src\timer)
+- [src\button\AlertButton.jsx](src\button\AlertButton.jsx)
+
+
+# Manipulasi DOM dengan Ref
+## Manipulasi DOM dengan Ref
+- React secara otomatis akan mengupdate DOM ketika melakukan render ulang, jadi kita tidak perlu memanipulasi DOM secara manual lagi
+- Tapi, kadang kita mungkin perlu mengakses DOM secara manual, contoh memindahkan fokus ke salah satu element, atau scroll ke element tertentu, dan lain-lain
+- Sayangnya, tidak ada cara untuk melakukan hal ini menggunakan React, jadi kita perlu tangani hal ini secara manual
+- Salah satu caranya kita menggunakan Ref menuju ke DOM element
+- Caranya, pada element nya, kita bisa tambahkan attribute ref
+
+## Ref untuk Component
+- Ref hanya bisa digunakan di DOM element, kita tidak bisa menggunakan ref di Component
+- Jika kita menambahkan Ref ke Component, maka attribute current akan bernilai null
+- Kita akan coba praktekan ini dengan membuat GuestBookInput Component
+
+## Mengakses Component DOM Element
+- Karena Component tidak bisa dijadikan sebagai Ref, oleh karena itu, jika kita ingin menggunakan Ref untuk Component, kita bisa menggunakan Props
+- Kita bisa membuat Props ref yang kita isi Ref 
+- Props ref bisa kita gunakan pada DOM element di dalam Component tersebut
+- Sekarang kita coba tambahkan Ref ke dalam Component GuestBookInput
+
+contoh di file :
+- [src\guestbook](src\guestbook)
+- [guestbook.html](guestbook.html)
+- [vite.config.js](vite.config.js)
+
+
+# Effect
+## Effect Hooks
+- Hooks selanjutnya yang akan kita bahas adalah Effect Hooks
+- Beberapa Component mungkin butuh untuk berkomunikasi dengan External System, misal berkomunikasi dengan Non-React Component, berkomunikasi dengan Server, dan lain-lain
+- Effect Hooks memungkinkan kita membuat kode yang dijalankan setelah proses render sehingga kita bisa berkomunikasi dengan system diluar React
+- Effect terjadi setelah proses render selesai
+- Kita bisa menggunakan useEffect() untuk membuat Effect
+- [https://react.dev/reference/react/useEffect](https://react.dev/reference/react/useEffect)
+
+## Kenapa Tidak Cukup Event Handler?
+- Biasanya kita tahu bahwa Component itu harus Pure, dan tidak memiliki efek samping
+- Untuk kode yang memiliki efek samping, biasanya kita gunakan Event Handler
+- Namun, kadang ada kebutuhan kita memang perlu membuat Component yang memiliki efek samping ketika dirender
+- Misal ketika Component di render, kita ingin mengambil data dari Server, sehingga bisa menyebabkan isi Component berubah (efek samping) sesuai dengan response Server
+- Disinilah Effect Hooks diperlukan
+
+## Infinite Loop
+- Secara default, Effect akan dieksekusi setelah proses render
+- Oleh karena itu, kita perlu berhati-hati, karena jika di dalam Effect kita mengubah State, maka bisa terjadi infinite loop yang menyebabkan proses render ulang terus-terusan terjadi tanpa henti
+
+# Effect Clean Up
+## Effect Clean Up
+- Pada beberapa kasus, mungkin kita butuh melakukan sesuatu setelah eksekusi Effect selesai dilakukan
+- Seperti misal di Try Catch, terdapat Finally
+- Di Effect terdapat proses yang namanya Clean Up, Clean Up akan dieksekusi setelah proses Effect selesai
+- Caranya cukup mudah, kita tinggal return kan Closure Function di dalam Effect
+- Clean Up akan dieksekusi sebelum Effect selanjutnya di eksekusi, atau Component di hilangkan
+
+contoh di file :
+- [src\product](src\product)
+- [public\product.json](public\product.json)
+- [vite.config.js](vite.config.js)
+- [product.html](product.html)
+
+
+# Effect Dependencies
+## Effect Dependencies
+- Secara default, Effect akan dieksekusi setiap selesai proses render
+- Artinya jika proses render dilakukan berkali-kali, Effect akan dieksekusi juga berkali-kali setelah proses render selesai
+- Hal ini menjadikan kita harus melakukan pengecekan secara manual seperti di materi sebelumnya jika tidak ingin kode Effect dijalankan berkali-kali
+- useEffect() memiliki parameter kedua yaitu Dependencies
+- Kita bisa mengisi Dependencies dengan Array dari State, dimana artinya Effect hanya akan dieksekusi jika State tersebut berubah, jika tidak berubah maka Effect tidak akan dieksekusi
+- Hal ini mungkin lebih mudah dibanding manual melakukan if else
+
+
+## Empty Dependencies
+- Kadang, kadang, mungkin kita hanya ingin memanggil Effect sekali saja setelah pertama kali Component di Render, setelah itu kita tidak mau memanggil Effect lagi, bahkan jika terjadi render ulang
+- Pada kasus seperti itu, kita bisa gunakan empty array sebagai dependencies, maka Effect hanya akan dipanggil sekali saja setelah render pertama kali, selanjutnya tidak akan dipanggil lagi
+
+contoh di file :
+- [src\product\ProductList.jsx](src\product\ProductList.jsx)
+
+# Async Code di Effect
+## Async Code di Effect
+- Kadang, saat berhubungan dengan System External, misal memanggil API, biasanya kita akan membuat kode Async Await
+- Sayangnya, Effect tidak mendukung Async Function, oleh karena itu jika kita bisa menggunakan Promise secara langsung, kita bisa langsung saja gunakan Promise, tanpa menggunakan Async Await
+- Namun, jika kita memang mau menggunakan Async Await, maka kita harus buat function yang nandi dipanggil di useEffect()
+- Misal, kita akan coba ubah kode sebelumnya menjadi kode Async Await ketika mengambil data Products
+
+contoh di file :
+- [src\product\ProductList.jsx](src\product\ProductList.jsx)
+
+# Jangan Gunakan Effect
+## Jangan Gunakan Effect
+- Effect Hook adalah cara di luar dari yang biasa dilakukan di React. 
+- Effect memungkinkan kita keluar dari kebiasaan di React, dan memungkinkan Component kita berinteraksi dengan External System seperti Non React Component, Network, dan lain-lain
+- Jika tidak ada interaksi dengan External System, maka sebaiknya jangan gunakan Effect
+- Meminimalisir penggunaan Effect akan membuat kode kita mudah untuk dibaca, cepat dieksekusi dan minim error
+
+## Jangan Gunakan Effect untuk Inisialisasi Aplikasi
+- Kadang beberapa proses dilakukan di awal sebelum halaman di tampilkan
+- Pada kasus ini, gunakan saja kode JavaScript langsung diluar React
+- Jangan gunakan Effect untuk melakukan inisialisasi aplikasi
+- Hal ini karena Effect akan dieksekusi setelah Render (setelah ditampilkan), dan akan dieksekusi ulang jika terjadi render ulang (bisa berkali-kali)
+
+## Jangan Gunakan Effect untuk Mengubah Data di Server
+- Jika terdapat logic di Effect melakukan perubahan data di Server, perlu hati-hati, karena bisa saja Effect dieksekusi berkali-kali karena proses render ulang
+- Oleh karena ini, tidak direkomendasikan untuk menggunakan Effect untuk mengubah data di Server
+- Gunakan Event Handler jika ingin mengubah data di Server, sehingga jelas kapan perubahan terjadi
+- Menggunakan Effect bisa menyebabkan perubahan data di Server terjadi berkali-kali karena render ulang Component
+
+# Memo
+## Memoization 
+- Memoization adalah teknik optimasi untuk mempercepat program komputer, dengan cara menyimpan data secara sementara dari hasil kalkulasi (yang biasanya berat), sehingga tidak perlu dikalkulasi ulang
+- Ini adalah bagian dari Performance Hooks, dimana kita bisa menggunakan function useMemo(callback, [dependencies])
+- [https://react.dev/reference/react/useMemo](https://react.dev/reference/react/useMemo)
+- Ini cocok untuk kasus misal kita perlu memanggil kode yang berat, dan hasilnya selalu sama, dibandingkan kita panggil terus-terusan setiap proses render, lebih baik kita lakukan sekali saja, dan  pada proses pemanggilan berikutnya, kita cukup kembalikan hasil yang pertama
+
+## Contoh Penggunaan Memo
+- Misal pada pada aplikasi Notes, kita ingin tambahkan proses untuk mencari Note
+- Jika misal pengguna melakukan pencarian dengan value yang sama, dibanding kita lakukan pencarian ulang, kita bisa kembalikan hasil yang sama saja seperti sebelumnya
+
+contoh di file :
+- [src\note\NoteList.jsx](src\note\NoteList.jsx)
+
+
+
+# Custom Hooks
+## Custom Hooks
+- React secara default sudah memiliki banyak Hooks untuk kita gunakan untuk mempermudah membuat aplikasi menggunakan React
+- Namun, kita juga bisa membuat Hooks secara manual jika kita mau
+- Membuat Hooks biasanya menggunakan function dengan awalan “use”
+- Contoh, kita akan membuat Hooks untuk mendeteksi apakah sedang Online atau Offline
+
+
+contoh di file :
+- [src\online](src\online)
+- [vite.config.js](vite.config.js)
+- [online.html](online.html)
+
+
+# Referensi Lengkap
+## Referensi Lengkap
+[https://react.dev/reference/react](https://react.dev/reference/react)
