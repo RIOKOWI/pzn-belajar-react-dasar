@@ -7,10 +7,16 @@ export default function ProductList(){
 
     useEffect(() => {
         if (loaded.current === false){ // cek jika status loaded false maka call dan render data/kalo true tidak usah di call dan render lagi
+            console.info("call api")
             fetch('/product.json') // fetch data dari product.json
                 .then((response) => response.json()) // lalu parsing response ke json
                 .then((data) => setProducts(data)) // lalu render dan masukin data nya ke state
                 .then(() => loaded.current = true) // set status loaded ke true agar tidak di render terus menerus
+        }
+
+        // clean upp effect
+        return () => {
+            console.info("Selesai fetch nya")
         }
     })
 

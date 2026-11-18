@@ -775,7 +775,18 @@ contoh di file :
 - Secara default, Effect akan dieksekusi setelah proses render
 - Oleh karena itu, kita perlu berhati-hati, karena jika di dalam Effect kita mengubah State, maka bisa terjadi infinite loop yang menyebabkan proses render ulang terus-terusan terjadi tanpa henti
 
-
-
 contoh di file :
-- [src\guestbook](src\guestbook)
+- [src\product](src\product)
+- [public\product.json](public\product.json)
+- [vite.config.js](vite.config.js)
+- [product.html](product.html)
+
+# Effect Clean Up
+## Effect Clean Up
+- Pada beberapa kasus, mungkin kita butuh melakukan sesuatu setelah eksekusi Effect selesai dilakukan
+- Seperti misal di Try Catch, terdapat Finally
+- Di Effect terdapat proses yang namanya Clean Up, Clean Up akan dieksekusi setelah proses Effect selesai
+- Caranya cukup mudah, kita tinggal return kan Closure Function di dalam Effect
+- Clean Up akan dieksekusi sebelum Effect selanjutnya di eksekusi, atau Component di hilangkan
+
+
