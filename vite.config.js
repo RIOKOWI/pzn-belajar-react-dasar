@@ -1,7 +1,5 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
-import Counter from './src/counter/Counter'
-import GuestBook from './src/guestbook/GuestBook'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -19,6 +17,7 @@ export default defineConfig({
         profle: 'profile.html',
         timer: 'timer.html',
         guestbook: 'guestbook.html',
+        product: 'product.html',
       }
     }
   }

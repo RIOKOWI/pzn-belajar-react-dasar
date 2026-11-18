@@ -749,10 +749,28 @@ contoh di file :
 - Props ref bisa kita gunakan pada DOM element di dalam Component tersebut
 - Sekarang kita coba tambahkan Ref ke dalam Component GuestBookInput
 
-
-
 contoh di file :
 - [src\guestbook](src\guestbook)
 - [guestbook.html](guestbook.html)
 - [vite.config.js](vite.config.js)
-- [src\guestbook\GuestBookForm.jsx](src\guestbook\GuestBookForm.jsx)
+
+
+# Effect
+## Effect Hooks
+- Hooks selanjutnya yang akan kita bahas adalah Effect Hooks
+- Beberapa Component mungkin butuh untuk berkomunikasi dengan External System, misal berkomunikasi dengan Non-React Component, berkomunikasi dengan Server, dan lain-lain
+- Effect Hooks memungkinkan kita membuat kode yang dijalankan setelah proses render sehingga kita bisa berkomunikasi dengan system diluar React
+- Effect terjadi setelah proses render selesai
+- Kita bisa menggunakan useEffect() untuk membuat Effect
+- [https://react.dev/reference/react/useEffect](https://react.dev/reference/react/useEffect)
+
+## Kenapa Tidak Cukup Event Handler?
+- Biasanya kita tahu bahwa Component itu harus Pure, dan tidak memiliki efek samping
+- Untuk kode yang memiliki efek samping, biasanya kita gunakan Event Handler
+- Namun, kadang ada kebutuhan kita memang perlu membuat Component yang memiliki efek samping ketika dirender
+- Misal ketika Component di render, kita ingin mengambil data dari Server, sehingga bisa menyebabkan isi Component berubah (efek samping) sesuai dengan response Server
+- Disinilah Effect Hooks diperlukan
+
+
+contoh di file :
+- [src\guestbook](src\guestbook)
