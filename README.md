@@ -866,3 +866,6 @@ contoh di file :
 - [online.html](online.html)
 
 
+# Referensi Lengkap
+## Referensi Lengkap
+[https://react.dev/reference/react](https://react.dev/reference/react)
