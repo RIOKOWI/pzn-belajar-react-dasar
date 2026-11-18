@@ -771,6 +771,11 @@ contoh di file :
 - Misal ketika Component di render, kita ingin mengambil data dari Server, sehingga bisa menyebabkan isi Component berubah (efek samping) sesuai dengan response Server
 - Disinilah Effect Hooks diperlukan
 
+## Infinite Loop
+- Secara default, Effect akan dieksekusi setelah proses render
+- Oleh karena itu, kita perlu berhati-hati, karena jika di dalam Effect kita mengubah State, maka bisa terjadi infinite loop yang menyebabkan proses render ulang terus-terusan terjadi tanpa henti
+
+
 
 contoh di file :
 - [src\guestbook](src\guestbook)
