@@ -816,3 +816,28 @@ contoh di file :
 
 contoh di file :
 - [src\product\ProductList.jsx](src\product\ProductList.jsx)
+
+# Jangan Gunakan Effect
+## Jangan Gunakan Effect
+- Effect Hook adalah cara di luar dari yang biasa dilakukan di React. 
+- Effect memungkinkan kita keluar dari kebiasaan di React, dan memungkinkan Component kita berinteraksi dengan External System seperti Non React Component, Network, dan lain-lain
+- Jika tidak ada interaksi dengan External System, maka sebaiknya jangan gunakan Effect
+- Meminimalisir penggunaan Effect akan membuat kode kita mudah untuk dibaca, cepat dieksekusi dan minim error
+
+## Jangan Gunakan Effect untuk Inisialisasi Aplikasi
+- Kadang beberapa proses dilakukan di awal sebelum halaman di tampilkan
+- Pada kasus ini, gunakan saja kode JavaScript langsung diluar React
+- Jangan gunakan Effect untuk melakukan inisialisasi aplikasi
+- Hal ini karena Effect akan dieksekusi setelah Render (setelah ditampilkan), dan akan dieksekusi ulang jika terjadi render ulang (bisa berkali-kali)
+
+## Jangan Gunakan Effect untuk Mengubah Data di Server
+- Jika terdapat logic di Effect melakukan perubahan data di Server, perlu hati-hati, karena bisa saja Effect dieksekusi berkali-kali karena proses render ulang
+- Oleh karena ini, tidak direkomendasikan untuk menggunakan Effect untuk mengubah data di Server
+- Gunakan Event Handler jika ingin mengubah data di Server, sehingga jelas kapan perubahan terjadi
+- Menggunakan Effect bisa menyebabkan perubahan data di Server terjadi berkali-kali karena render ulang Component
+
+
+
+
+
+
