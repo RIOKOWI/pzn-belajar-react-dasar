@@ -804,8 +804,15 @@ contoh di file :
 - Kadang, kadang, mungkin kita hanya ingin memanggil Effect sekali saja setelah pertama kali Component di Render, setelah itu kita tidak mau memanggil Effect lagi, bahkan jika terjadi render ulang
 - Pada kasus seperti itu, kita bisa gunakan empty array sebagai dependencies, maka Effect hanya akan dipanggil sekali saja setelah render pertama kali, selanjutnya tidak akan dipanggil lagi
 
-
-
 contoh di file :
 - [src\product\ProductList.jsx](src\product\ProductList.jsx)
 
+# Async Code di Effect
+## Async Code di Effect
+- Kadang, saat berhubungan dengan System External, misal memanggil API, biasanya kita akan membuat kode Async Await
+- Sayangnya, Effect tidak mendukung Async Function, oleh karena itu jika kita bisa menggunakan Promise secara langsung, kita bisa langsung saja gunakan Promise, tanpa menggunakan Async Await
+- Namun, jika kita memang mau menggunakan Async Await, maka kita harus buat function yang nandi dipanggil di useEffect()
+- Misal, kita akan coba ubah kode sebelumnya menjadi kode Async Await ketika mengambil data Products
+
+contoh di file :
+- [src\product\ProductList.jsx](src\product\ProductList.jsx)

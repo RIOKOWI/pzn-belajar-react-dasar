@@ -25,16 +25,21 @@ export default function ProductList(){
         //         .then(() => loaded.current = true) // set status loaded ke true agar tidak di render terus menerus
         //     }
             
-        //     // clean upp effect
-        //     return () => {
-            //         console.info("Selesai fetch nya")
-            //     }
-
-            if (load) { // cek kondisi load true or false
-                console.info("Load Data")
-                fetch('/product.json') // fetch data dari product.json
-                    .then((response) => response.json()) // lalu parsing response ke json
-                    .then((data) => setProducts(data)) // lalu render dan masukin data nya ke state        
+        async function fetchProducts() { // membuat async code di effect
+            const response = await fetch("/product.json") // fetch data
+            const data = await response.json() // parsing ke json
+            setProducts(data); // masukin ke useState
+        }
+        console.info("Load Data")
+        if (load) { // cek kondisi load true or false
+            fetchProducts(); //  call async function
+            // fetch('/product.json') // fetch data dari product.json
+            // .then((response) => response.json()) // lalu parsing response ke json
+            // .then((data) => setProducts(data)) // lalu render dan masukin data nya ke state        
+        }
+        // clean upp effect
+        return () => {
+                console.info("Selesai fetch nya")
             }
     }, [load]) // call effect dependency
 
