@@ -10,6 +10,12 @@ export default function ProductList(){
         setLoad(true)
     }
 
+    // empty dependecies
+    useEffect(() => {
+        console.info("Empty Array")
+    }, []) // cukup di panggil sekali saat di render ulang
+
+
     useEffect(() => {
         // if (loaded.current === false){ // cek jika status loaded false maka call dan render data/kalo true tidak usah di call dan render lagi
         //     // console.info("call api")
