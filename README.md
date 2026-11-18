@@ -847,10 +847,22 @@ contoh di file :
 - Misal pada pada aplikasi Notes, kita ingin tambahkan proses untuk mencari Note
 - Jika misal pengguna melakukan pencarian dengan value yang sama, dibanding kita lakukan pencarian ulang, kita bisa kembalikan hasil yang sama saja seperti sebelumnya
 
-
 contoh di file :
 - [src\note\NoteList.jsx](src\note\NoteList.jsx)
 
 
+
+# Custom Hooks
+## Custom Hooks
+- React secara default sudah memiliki banyak Hooks untuk kita gunakan untuk mempermudah membuat aplikasi menggunakan React
+- Namun, kita juga bisa membuat Hooks secara manual jika kita mau
+- Membuat Hooks biasanya menggunakan function dengan awalan “use”
+- Contoh, kita akan membuat Hooks untuk mendeteksi apakah sedang Online atau Offline
+
+
+contoh di file :
+- [src\online](src\online)
+- [vite.config.js](vite.config.js)
+- [online.html](online.html)
 
 
