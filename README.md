@@ -775,12 +775,6 @@ contoh di file :
 - Secara default, Effect akan dieksekusi setelah proses render
 - Oleh karena itu, kita perlu berhati-hati, karena jika di dalam Effect kita mengubah State, maka bisa terjadi infinite loop yang menyebabkan proses render ulang terus-terusan terjadi tanpa henti
 
-contoh di file :
-- [src\product](src\product)
-- [public\product.json](public\product.json)
-- [vite.config.js](vite.config.js)
-- [product.html](product.html)
-
 # Effect Clean Up
 ## Effect Clean Up
 - Pada beberapa kasus, mungkin kita butuh melakukan sesuatu setelah eksekusi Effect selesai dilakukan
@@ -789,4 +783,29 @@ contoh di file :
 - Caranya cukup mudah, kita tinggal return kan Closure Function di dalam Effect
 - Clean Up akan dieksekusi sebelum Effect selanjutnya di eksekusi, atau Component di hilangkan
 
+contoh di file :
+- [src\product](src\product)
+- [public\product.json](public\product.json)
+- [vite.config.js](vite.config.js)
+- [product.html](product.html)
+
+
+# Effect Dependencies
+## Effect Dependencies
+- Secara default, Effect akan dieksekusi setiap selesai proses render
+- Artinya jika proses render dilakukan berkali-kali, Effect akan dieksekusi juga berkali-kali setelah proses render selesai
+- Hal ini menjadikan kita harus melakukan pengecekan secara manual seperti di materi sebelumnya jika tidak ingin kode Effect dijalankan berkali-kali
+- useEffect() memiliki parameter kedua yaitu Dependencies
+- Kita bisa mengisi Dependencies dengan Array dari State, dimana artinya Effect hanya akan dieksekusi jika State tersebut berubah, jika tidak berubah maka Effect tidak akan dieksekusi
+- Hal ini mungkin lebih mudah dibanding manual melakukan if else
+
+
+## Empty Dependencies
+- Kadang, kadang, mungkin kita hanya ingin memanggil Effect sekali saja setelah pertama kali Component di Render, setelah itu kita tidak mau memanggil Effect lagi, bahkan jika terjadi render ulang
+- Pada kasus seperti itu, kita bisa gunakan empty array sebagai dependencies, maka Effect hanya akan dipanggil sekali saja setelah render pertama kali, selanjutnya tidak akan dipanggil lagi
+
+
+
+contoh di file :
+- [src\product\ProductList.jsx](src\product\ProductList.jsx)
 
